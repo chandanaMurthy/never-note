@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let string = "My name is Chandana. It means silent sandal. I disagree."
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -22,10 +21,5 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func startUp() {
-        print("Hi")
-    }
-
-
 }
 
