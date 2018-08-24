@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,18 +22,37 @@
                                 <rect key="frame" x="0.0" y="695" width="375" height="83"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <tabBarItem title="Notes" id="gfj-yJ-WDj"/>
-                                    <tabBarItem title="Completed" id="y0g-Mz-HVU"/>
-                                    <tabBarItem title="Trash" id="U0Z-Eh-JOx"/>
-                                    <tabBarItem title="Settings" id="xa9-AL-PuK"/>
+                                    <tabBarItem title="Notes" image="Notes" id="gfj-yJ-WDj"/>
+                                    <tabBarItem title="Completed" image="Done" id="y0g-Mz-HVU"/>
+                                    <tabBarItem title="Trash" image="Trash" id="U0Z-Eh-JOx">
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="5"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Settings" image="Settings" id="xa9-AL-PuK"/>
                                 </items>
                             </tabBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAp-Tv-5gd">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" red="0.08956349641084671" green="0.45356523990631104" blue="0.67244535684585571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97184831189999998" green="1" blue="0.99057350590000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Nevernote" id="Zbf-vo-2sE">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Uip-vE-vSp">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xz0-8q-hnK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1PS-eK-slw"/>
+                            <constraint firstItem="GAp-Tv-5gd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="L1K-XQ-Ct8"/>
                             <constraint firstItem="xz0-8q-hnK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NrZ-vx-xRh"/>
                             <constraint firstItem="xz0-8q-hnK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OEv-Rc-Za8"/>
+                            <constraint firstItem="GAp-Tv-5gd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UI0-d2-sbq"/>
+                            <constraint firstItem="GAp-Tv-5gd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bY1-xR-P2V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -42,4 +61,10 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Done" width="25" height="25"/>
+        <image name="Notes" width="25" height="25"/>
+        <image name="Settings" width="25" height="25"/>
+        <image name="Trash" width="25" height="25"/>
+    </resources>
 </document>
