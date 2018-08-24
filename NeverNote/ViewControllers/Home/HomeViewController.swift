@@ -8,8 +8,13 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class HomeViewController: UIViewController {
 
+    @IBAction func addNavigationButton(_ sender: Any?) {
+        let addScreenViewController = UIViewController.addScreen
+        self.present(addScreenViewController, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

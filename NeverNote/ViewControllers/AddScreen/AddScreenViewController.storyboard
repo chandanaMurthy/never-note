@@ -13,7 +13,7 @@
         <!--Add Screen View Controller-->
         <scene sceneID="BJc-V6-fnU">
             <objects>
-                <viewController id="Dce-Ol-gBB" customClass="AddScreenViewController" customModule="NeverNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dce-Ol-gBB" customClass="AddScreenViewController" customModule="NeverNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tRW-ZS-ugr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,6 +62,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SjL-bA-rL4"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mUo-aZ-1l3"/>
                     <connections>
                         <outlet property="taskLabel" destination="6iC-Uu-gGu" id="JZL-BN-nKf"/>
                         <outlet property="titleLabel" destination="Fcl-F5-USh" id="4hh-9i-IPx"/>
@@ -69,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="syF-h4-sBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18.399999999999999" y="159.60591133004928"/>
+            <point key="canvasLocation" x="924" y="159.60591133004928"/>
         </scene>
     </scenes>
 </document>
