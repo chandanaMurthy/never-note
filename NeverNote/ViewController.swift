@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let string = "My name is Chandana. It means silent sandal! I agree!"
+        let string = "My name is Chandana. It means silent sandal. Let's agree to disagree."
         // Do any additional setup after loading the view, typically from a nib.
     }
     
