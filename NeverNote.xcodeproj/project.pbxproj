@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17E9EDBF212FD9E7007D56CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9EDBE212FD9E7007D56CB /* AppDelegate.swift */; };
+		17E9EDC1212FD9E7007D56CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9EDC0212FD9E7007D56CB /* ViewController.swift */; };
+		17E9EDC4212FD9E7007D56CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E9EDC2212FD9E7007D56CB /* Main.storyboard */; };
+		17E9EDC6212FD9E7007D56CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17E9EDC5212FD9E7007D56CB /* Assets.xcassets */; };
+		17E9EDC9212FD9E7007D56CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E9EDC7212FD9E7007D56CB /* LaunchScreen.storyboard */; };
+		17E9EDD4212FD9E8007D56CB /* NeverNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9EDD3212FD9E8007D56CB /* NeverNoteTests.swift */; };
+		17E9EDDF212FD9E8007D56CB /* NeverNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9EDDE212FD9E8007D56CB /* NeverNoteUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17E9EDD0212FD9E8007D56CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17E9EDB3212FD9E7007D56CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17E9EDBA212FD9E7007D56CB;
+			remoteInfo = NeverNote;
+		};
+		17E9EDDB212FD9E8007D56CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17E9EDB3212FD9E7007D56CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17E9EDBA212FD9E7007D56CB;
+			remoteInfo = NeverNote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17E9EDBB212FD9E7007D56CB /* NeverNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeverNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17E9EDBE212FD9E7007D56CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17E9EDC0212FD9E7007D56CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17E9EDC3212FD9E7007D56CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17E9EDC5212FD9E7007D56CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17E9EDC8212FD9E7007D56CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17E9EDCA212FD9E7007D56CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17E9EDCF212FD9E8007D56CB /* NeverNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeverNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17E9EDD3212FD9E8007D56CB /* NeverNoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeverNoteTests.swift; sourceTree = "<group>"; };
+		17E9EDD5212FD9E8007D56CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17E9EDDA212FD9E8007D56CB /* NeverNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeverNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17E9EDDE212FD9E8007D56CB /* NeverNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeverNoteUITests.swift; sourceTree = "<group>"; };
+		17E9EDE0212FD9E8007D56CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17E9EDB8212FD9E7007D56CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17E9EDCC212FD9E8007D56CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17E9EDD7212FD9E8007D56CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17E9EDB2212FD9E7007D56CB = {
+			isa = PBXGroup;
+			children = (
+				17E9EDBD212FD9E7007D56CB /* NeverNote */,
+				17E9EDD2212FD9E8007D56CB /* NeverNoteTests */,
+				17E9EDDD212FD9E8007D56CB /* NeverNoteUITests */,
+				17E9EDBC212FD9E7007D56CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17E9EDBC212FD9E7007D56CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17E9EDBB212FD9E7007D56CB /* NeverNote.app */,
+				17E9EDCF212FD9E8007D56CB /* NeverNoteTests.xctest */,
+				17E9EDDA212FD9E8007D56CB /* NeverNoteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17E9EDBD212FD9E7007D56CB /* NeverNote */ = {
+			isa = PBXGroup;
+			children = (
+				17E9EDBE212FD9E7007D56CB /* AppDelegate.swift */,
+				17E9EDC0212FD9E7007D56CB /* ViewController.swift */,
+				17E9EDC2212FD9E7007D56CB /* Main.storyboard */,
+				17E9EDC5212FD9E7007D56CB /* Assets.xcassets */,
+				17E9EDC7212FD9E7007D56CB /* LaunchScreen.storyboard */,
+				17E9EDCA212FD9E7007D56CB /* Info.plist */,
+			);
+			path = NeverNote;
+			sourceTree = "<group>";
+		};
+		17E9EDD2212FD9E8007D56CB /* NeverNoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				17E9EDD3212FD9E8007D56CB /* NeverNoteTests.swift */,
+				17E9EDD5212FD9E8007D56CB /* Info.plist */,
+			);
+			path = NeverNoteTests;
+			sourceTree = "<group>";
+		};
+		17E9EDDD212FD9E8007D56CB /* NeverNoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17E9EDDE212FD9E8007D56CB /* NeverNoteUITests.swift */,
+				17E9EDE0212FD9E8007D56CB /* Info.plist */,
+			);
+			path = NeverNoteUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17E9EDBA212FD9E7007D56CB /* NeverNote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17E9EDE3212FD9E8007D56CB /* Build configuration list for PBXNativeTarget "NeverNote" */;
+			buildPhases = (
+				17E9EDB7212FD9E7007D56CB /* Sources */,
+				17E9EDB8212FD9E7007D56CB /* Frameworks */,
+				17E9EDB9212FD9E7007D56CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NeverNote;
+			productName = NeverNote;
+			productReference = 17E9EDBB212FD9E7007D56CB /* NeverNote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17E9EDCE212FD9E8007D56CB /* NeverNoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17E9EDE6212FD9E8007D56CB /* Build configuration list for PBXNativeTarget "NeverNoteTests" */;
+			buildPhases = (
+				17E9EDCB212FD9E8007D56CB /* Sources */,
+				17E9EDCC212FD9E8007D56CB /* Frameworks */,
+				17E9EDCD212FD9E8007D56CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17E9EDD1212FD9E8007D56CB /* PBXTargetDependency */,
+			);
+			name = NeverNoteTests;
+			productName = NeverNoteTests;
+			productReference = 17E9EDCF212FD9E8007D56CB /* NeverNoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17E9EDD9212FD9E8007D56CB /* NeverNoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17E9EDE9212FD9E8007D56CB /* Build configuration list for PBXNativeTarget "NeverNoteUITests" */;
+			buildPhases = (
+				17E9EDD6212FD9E8007D56CB /* Sources */,
+				17E9EDD7212FD9E8007D56CB /* Frameworks */,
+				17E9EDD8212FD9E8007D56CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17E9EDDC212FD9E8007D56CB /* PBXTargetDependency */,
+			);
+			name = NeverNoteUITests;
+			productName = NeverNoteUITests;
+			productReference = 17E9EDDA212FD9E8007D56CB /* NeverNoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17E9EDB3212FD9E7007D56CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Chandana;
+				TargetAttributes = {
+					17E9EDBA212FD9E7007D56CB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					17E9EDCE212FD9E8007D56CB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 17E9EDBA212FD9E7007D56CB;
+					};
+					17E9EDD9212FD9E8007D56CB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 17E9EDBA212FD9E7007D56CB;
+					};
+				};
+			};
+			buildConfigurationList = 17E9EDB6212FD9E7007D56CB /* Build configuration list for PBXProject "NeverNote" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17E9EDB2212FD9E7007D56CB;
+			productRefGroup = 17E9EDBC212FD9E7007D56CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17E9EDBA212FD9E7007D56CB /* NeverNote */,
+				17E9EDCE212FD9E8007D56CB /* NeverNoteTests */,
+				17E9EDD9212FD9E8007D56CB /* NeverNoteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17E9EDB9212FD9E7007D56CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E9EDC9212FD9E7007D56CB /* LaunchScreen.storyboard in Resources */,
+				17E9EDC6212FD9E7007D56CB /* Assets.xcassets in Resources */,
+				17E9EDC4212FD9E7007D56CB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17E9EDCD212FD9E8007D56CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17E9EDD8212FD9E8007D56CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17E9EDB7212FD9E7007D56CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E9EDC1212FD9E7007D56CB /* ViewController.swift in Sources */,
+				17E9EDBF212FD9E7007D56CB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17E9EDCB212FD9E8007D56CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E9EDD4212FD9E8007D56CB /* NeverNoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17E9EDD6212FD9E8007D56CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E9EDDF212FD9E8007D56CB /* NeverNoteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17E9EDD1212FD9E8007D56CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17E9EDBA212FD9E7007D56CB /* NeverNote */;
+			targetProxy = 17E9EDD0212FD9E8007D56CB /* PBXContainerItemProxy */;
+		};
+		17E9EDDC212FD9E8007D56CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17E9EDBA212FD9E7007D56CB /* NeverNote */;
+			targetProxy = 17E9EDDB212FD9E8007D56CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17E9EDC2212FD9E7007D56CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17E9EDC3212FD9E7007D56CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17E9EDC7212FD9E7007D56CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17E9EDC8212FD9E7007D56CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17E9EDE1212FD9E8007D56CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17E9EDE2212FD9E8007D56CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17E9EDE4212FD9E8007D56CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NeverNote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17E9EDE5212FD9E8007D56CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NeverNote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17E9EDE7212FD9E8007D56CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NeverNoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeverNote.app/NeverNote";
+			};
+			name = Debug;
+		};
+		17E9EDE8212FD9E8007D56CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NeverNoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeverNote.app/NeverNote";
+			};
+			name = Release;
+		};
+		17E9EDEA212FD9E8007D56CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NeverNoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NeverNote;
+			};
+			name = Debug;
+		};
+		17E9EDEB212FD9E8007D56CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NeverNoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NeverNote;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17E9EDB6212FD9E7007D56CB /* Build configuration list for PBXProject "NeverNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17E9EDE1212FD9E8007D56CB /* Debug */,
+				17E9EDE2212FD9E8007D56CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17E9EDE3212FD9E8007D56CB /* Build configuration list for PBXNativeTarget "NeverNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17E9EDE4212FD9E8007D56CB /* Debug */,
+				17E9EDE5212FD9E8007D56CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17E9EDE6212FD9E8007D56CB /* Build configuration list for PBXNativeTarget "NeverNoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17E9EDE7212FD9E8007D56CB /* Debug */,
+				17E9EDE8212FD9E8007D56CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17E9EDE9212FD9E8007D56CB /* Build configuration list for PBXNativeTarget "NeverNoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17E9EDEA212FD9E8007D56CB /* Debug */,
+				17E9EDEB212FD9E8007D56CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17E9EDB3212FD9E7007D56CB /* Project object */;
+}
