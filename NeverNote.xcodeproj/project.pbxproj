@@ -18,6 +18,10 @@
 		48695097212FFFD800DED227 /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48695096212FFFD800DED227 /* AddScreenViewController.swift */; };
 		486950A02130266800DED227 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869509F2130266800DED227 /* UIStoryboard.swift */; };
 		486950A22130279300DED227 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486950A12130279300DED227 /* UIViewController.swift */; };
+		486950A621303CC200DED227 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486950A521303CC200DED227 /* TaskViewController.swift */; };
+		486950A821303CEB00DED227 /* TaskViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486950A721303CEB00DED227 /* TaskViewController.storyboard */; };
+		486950AA21303D0500DED227 /* CompletedTasksViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486950A921303D0500DED227 /* CompletedTasksViewController.storyboard */; };
+		486950AC21303D1800DED227 /* CompletedTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486950AB21303D1800DED227 /* CompletedTasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		48695096212FFFD800DED227 /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
 		4869509F2130266800DED227 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		486950A12130279300DED227 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		486950A521303CC200DED227 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		486950A721303CEB00DED227 /* TaskViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskViewController.storyboard; sourceTree = "<group>"; };
+		486950A921303D0500DED227 /* CompletedTasksViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompletedTasksViewController.storyboard; sourceTree = "<group>"; };
+		486950AB21303D1800DED227 /* CompletedTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,8 @@
 		48695098213025D400DED227 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				486950A421303BD500DED227 /* Completed */,
+				486950A321303BB900DED227 /* Notes */,
 				4869509E2130262400DED227 /* Home */,
 				4869509D2130261000DED227 /* AddScreen */,
 			);
@@ -187,10 +197,28 @@
 		4869509E2130262400DED227 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				17E9EDC0212FD9E7007D56CB /* HomeViewController.swift */,
 				17E9EDC2212FD9E7007D56CB /* HomeViewController.storyboard */,
+				17E9EDC0212FD9E7007D56CB /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		486950A321303BB900DED227 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				486950A721303CEB00DED227 /* TaskViewController.storyboard */,
+				486950A521303CC200DED227 /* TaskViewController.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		486950A421303BD500DED227 /* Completed */ = {
+			isa = PBXGroup;
+			children = (
+				486950A921303D0500DED227 /* CompletedTasksViewController.storyboard */,
+				486950AB21303D1800DED227 /* CompletedTasksViewController.swift */,
+			);
+			path = Completed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +329,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				48695095212FFF2A00DED227 /* AddScreenViewController.storyboard in Resources */,
+				486950AA21303D0500DED227 /* CompletedTasksViewController.storyboard in Resources */,
 				17E9EDC9212FD9E7007D56CB /* LaunchScreen.storyboard in Resources */,
+				486950A821303CEB00DED227 /* TaskViewController.storyboard in Resources */,
 				17E9EDC6212FD9E7007D56CB /* Assets.xcassets in Resources */,
 				17E9EDC4212FD9E7007D56CB /* HomeViewController.storyboard in Resources */,
 			);
@@ -332,7 +362,9 @@
 				17E9EDBF212FD9E7007D56CB /* AppDelegate.swift in Sources */,
 				48695097212FFFD800DED227 /* AddScreenViewController.swift in Sources */,
 				486950A02130266800DED227 /* UIStoryboard.swift in Sources */,
+				486950AC21303D1800DED227 /* CompletedTasksViewController.swift in Sources */,
 				486950A22130279300DED227 /* UIViewController.swift in Sources */,
+				486950A621303CC200DED227 /* TaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
