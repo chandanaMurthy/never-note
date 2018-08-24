@@ -11,8 +11,16 @@ import UIKit
 
 class AddScreenViewController: UIViewController {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var taskLabel: UILabel!
+    @IBOutlet weak var titletextField: UITextField!
+    @IBOutlet weak var taskTextView: UITextView!
+    
     @IBAction func doneBarButton(_ sender: Any) {
+        let homeViewController = UIViewController.home
+        self.present(homeViewController, animated: true, completion: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        titletextField.placeholder = Constants.PLACEHOLDER_TEXTFIELD
     }
 }
