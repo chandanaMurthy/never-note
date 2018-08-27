@@ -61,16 +61,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="goToCompletedButton" destination="y0g-Mz-HVU" id="U7C-Jo-QQy"/>
-                        <outlet property="goToNotesButton" destination="gfj-yJ-WDj" id="xo4-Rw-yJ0"/>
-                        <outlet property="goToSettingsButton" destination="xa9-AL-PuK" id="c81-KQ-dBA"/>
-                        <outlet property="goToTrashButton" destination="U0Z-Eh-JOx" id="CHG-KP-U4G"/>
-                        <outlet property="homeTabBar" destination="xz0-8q-hnK" id="47Y-WF-dbc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="148" y="-95"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="mUH-Hg-Hbn">
+            <objects>
+                <tabBarController id="XJk-Pv-yyb" customClass="HomeViewController" customModule="NeverNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qcI-Mt-TE0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WlR-aV-7Nc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-577" y="-129"/>
         </scene>
     </scenes>
     <resources>
