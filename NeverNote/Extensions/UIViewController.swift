@@ -75,6 +75,4 @@ extension UIViewController {
             return settingsViewController
         }
     }
-
-
 }

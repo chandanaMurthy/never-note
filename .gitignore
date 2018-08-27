@@ -19,9 +19,10 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata/
+*xcworkspace/xcuserdata/*
 
 ## Other
+*.xcuserdata
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
