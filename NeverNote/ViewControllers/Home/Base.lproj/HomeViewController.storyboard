@@ -13,7 +13,7 @@
         <!--Item 2-->
         <scene sceneID="yTi-LM-1vf">
             <objects>
-                <viewController id="VRP-V7-edO" customClass="TrashViewController" customModule="NeverNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompletedTasksViewController" id="VRP-V7-edO" customClass="CompletedTasksViewController" customModule="NeverNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JUz-lP-MU6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
         <!--Item-->
         <scene sceneID="PNo-Z7-aX9">
             <objects>
-                <viewController id="efN-RU-2zO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" id="efN-RU-2zO" customClass="SettingsViewController" customModule="NeverNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RcU-v9-Tpx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +63,7 @@
         <!--Item 1-->
         <scene sceneID="nve-6m-Yvi">
             <objects>
-                <viewController id="1gs-lb-qwP" customClass="NotesViewController" customModule="NeverNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotesViewController" id="1gs-lb-qwP" customClass="NotesViewController" customModule="NeverNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GlG-YH-jgX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +88,7 @@
         <!--Item-->
         <scene sceneID="DK9-As-5fT">
             <objects>
-                <viewController id="FH1-3N-HpU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrashViewController" id="FH1-3N-HpU" customClass="TrashViewController" customModule="NeverNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZjA-KF-Z9N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
