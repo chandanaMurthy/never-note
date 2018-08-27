@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, UITabBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.homeTabBar.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
+                // Do any additional setup after loading the view, typically from a nib.
     }
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
