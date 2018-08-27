@@ -1,5 +1,5 @@
 //
-//  CompletedTasks.swift
+//  TaskViewController.swift
 //  NeverNote
 //
 //  Created by Aditya on 8/24/18.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CompletedTasksViewController: UIViewController {
+class NotesViewController: UIViewController {
     @IBAction func goHomeButton(_ sender: Any) {
         let homeViewController = UIViewController.home
         self.present(homeViewController, animated: true, completion: nil)
