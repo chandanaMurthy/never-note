@@ -10,8 +10,6 @@
 build/
 DerivedData/
 
-NeverNote.xcodeproj/project.xcworkspace/xcuserdata/aditya.xcuserdatad/UserInterfaceState.xcuserstate
-
 ## Various settings
 *.pbxuser
 !default.pbxuser
