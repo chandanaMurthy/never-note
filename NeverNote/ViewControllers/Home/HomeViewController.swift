@@ -8,42 +8,55 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITabBarDelegate {
-
+class HomeViewController: UITabBarController {
+    let notes = NotesViewController()
+    let completed = CompletedTasksViewController()
+    let trash = TrashViewController()
+    let settings = SettingsViewController()
+    
+    @IBOutlet weak var trashButton: UITabBarItem!
+    @IBOutlet weak var notesButton: UITabBarItem!
+    @IBOutlet weak var settingsButton: UITabBarItem!
+    @IBOutlet weak var completedButton: UITabBarItem!
+    
     @IBAction func addNavigationButton(_ sender: Any?) {
         let addScreenViewController = UIViewController.addScreen
         self.present(addScreenViewController, animated: true, completion: nil)
     }
-    @IBOutlet weak var goToNotesButton: UITabBarItem!
-    @IBOutlet weak var homeTabBar: UITabBar!
-    @IBOutlet weak var goToCompletedButton: UITabBarItem!
-    @IBOutlet weak var goToTrashButton: UITabBarItem!
-    @IBOutlet weak var goToSettingsButton: UITabBarItem!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.homeTabBar.delegate = self
-                // Do any additional setup after loading the view, typically from a nib.
+        
+        notes.tabBarItem = UITabBarItem(title: Constants.NOTES, image: #imageLiteral(resourceName: "Notes"), tag: 10)
+        
+        completed.tabBarItem = UITabBarItem(title: Constants.COMPLETED, image: #imageLiteral(resourceName: "Done"), tag: 12)
+        trash.tabBarItem = UITabBarItem(title: Constants.TRASH, image: #imageLiteral(resourceName: "Trash"), tag: 14)
+        settings.tabBarItem = UITabBarItem(title: Constants.SETTINGS, image: #imageLiteral(resourceName: "Settings"), tag: 16)
+        self.viewControllers = [notes, completed, trash, settings]
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if item.tag == 0 {
-            let notesViewController = UIViewController.notes
-            self.present(notesViewController, animated: true, completion: nil)
-        }
-        else if item.tag == 1 {
-            let completedTasksViewController = UIViewController.completed
-            self.present(completedTasksViewController, animated: true, completion: nil)
-        }
-        else if item.tag == 2 {
-            print("trash")
-        }
-        else {
-            print("settings")
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        selectedIndex = 3
+    }
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        //print(selectedIndex)
+    }
+    
+    override var selectedViewController: UIViewController? {
+        didSet {
+            print("VC \(selectedIndex)")
         }
     }
     
+    override var selectedIndex: Int {
+        didSet {
+            print(selectedIndex)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
