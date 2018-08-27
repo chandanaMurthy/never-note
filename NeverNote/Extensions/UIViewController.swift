@@ -31,5 +31,28 @@ extension UIViewController {
             return addScreenViewController
         }
     }
+    
+    static let NOTES_VIEW_CONTROLLER = "NotesViewController"
+    static var notes : NotesViewController {
+        get {
+            let notesStoryboard = UIStoryboard.notes
+            guard let notesViewController = notesStoryboard.instantiateViewController(withIdentifier: NotesViewController.NOTES_VIEW_CONTROLLER) as? NotesViewController else {
+                fatalError("There is no identifier set as \(NotesViewController.NOTES_VIEW_CONTROLLER)")
+            }
+            return notesViewController
+        }
+    }
+    
+    static let COMPLETED_TASKS_VIEW_CONTROLLER = "CompletedTasksViewController"
+    static var completed : CompletedTasksViewController {
+        get {
+            let completedTasksStoryboard = UIStoryboard.completed
+            guard let completedTasksViewController = completedTasksStoryboard.instantiateViewController(withIdentifier: CompletedTasksViewController.COMPLETED_TASKS_VIEW_CONTROLLER) as? CompletedTasksViewController else {
+                fatalError("There is no identifier set as \(CompletedTasksViewController.COMPLETED_TASKS_VIEW_CONTROLLER)")
+            }
+            return completedTasksViewController
+        }
+    }
+
 
 }
