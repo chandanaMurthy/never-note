@@ -53,6 +53,28 @@ extension UIViewController {
             return completedTasksViewController
         }
     }
+    
+    static let TRASH_VIEW_CONTROLLER = "TrashViewController"
+    static var trash: TrashViewController {
+        get {
+            let trashStoryboard = UIStoryboard.trash
+            guard let trashViewController = trashStoryboard.instantiateViewController(withIdentifier: TrashViewController.TRASH_VIEW_CONTROLLER) as? TrashViewController else {
+                fatalError("There is no identifier set as \(TrashViewController.TRASH_VIEW_CONTROLLER)")
+            }
+            return trashViewController
+        }
+    }
+    
+    static let SETTINGS_VIEW_CONTROLLER = "SettingsViewController"
+    static var settings: SettingsViewController {
+        get {
+            let settingsStoryboard = UIStoryboard.settings
+            guard let settingsViewController = settingsStoryboard.instantiateViewController(withIdentifier: SettingsViewController.SETTINGS_VIEW_CONTROLLER) as? SettingsViewController else {
+                fatalError("There is no identifier set as \(SettingsViewController.SETTINGS_VIEW_CONTROLLER)")
+            }
+            return settingsViewController
+        }
+    }
 
 
 }
