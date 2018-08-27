@@ -15,17 +15,13 @@
 		17E9EDC9212FD9E7007D56CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E9EDC7212FD9E7007D56CB /* LaunchScreen.storyboard */; };
 		17E9EDD4212FD9E8007D56CB /* NeverNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9EDD3212FD9E8007D56CB /* NeverNoteTests.swift */; };
 		17E9EDDF212FD9E8007D56CB /* NeverNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9EDDE212FD9E8007D56CB /* NeverNoteUITests.swift */; };
-		17EDBDB021314D92002B17F5 /* TrashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EDBDAF21314D92002B17F5 /* TrashViewController.storyboard */; };
 		17EDBDB421314E33002B17F5 /* TrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EDBDB321314E33002B17F5 /* TrashViewController.swift */; };
-		17EDBDB721314E85002B17F5 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EDBDB621314E85002B17F5 /* SettingsViewController.storyboard */; };
 		17EDBDB921314EFE002B17F5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EDBDB821314EFE002B17F5 /* SettingsViewController.swift */; };
 		48695095212FFF2A00DED227 /* AddScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48695094212FFF2A00DED227 /* AddScreenViewController.storyboard */; };
 		48695097212FFFD800DED227 /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48695096212FFFD800DED227 /* AddScreenViewController.swift */; };
 		486950A02130266800DED227 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869509F2130266800DED227 /* UIStoryboard.swift */; };
 		486950A22130279300DED227 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486950A12130279300DED227 /* UIViewController.swift */; };
 		486950A621303CC200DED227 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486950A521303CC200DED227 /* NotesViewController.swift */; };
-		486950A821303CEB00DED227 /* NotesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486950A721303CEB00DED227 /* NotesViewController.storyboard */; };
-		486950AA21303D0500DED227 /* CompletedTasksViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486950A921303D0500DED227 /* CompletedTasksViewController.storyboard */; };
 		486950AC21303D1800DED227 /* CompletedTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486950AB21303D1800DED227 /* CompletedTasksViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,17 +57,13 @@
 		17E9EDDA212FD9E8007D56CB /* NeverNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeverNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E9EDDE212FD9E8007D56CB /* NeverNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeverNoteUITests.swift; sourceTree = "<group>"; };
 		17E9EDE0212FD9E8007D56CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17EDBDAF21314D92002B17F5 /* TrashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrashViewController.storyboard; sourceTree = "<group>"; };
 		17EDBDB321314E33002B17F5 /* TrashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashViewController.swift; sourceTree = "<group>"; };
-		17EDBDB621314E85002B17F5 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		17EDBDB821314EFE002B17F5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		48695094212FFF2A00DED227 /* AddScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddScreenViewController.storyboard; sourceTree = "<group>"; };
 		48695096212FFFD800DED227 /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
 		4869509F2130266800DED227 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		486950A12130279300DED227 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		486950A521303CC200DED227 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
-		486950A721303CEB00DED227 /* NotesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotesViewController.storyboard; sourceTree = "<group>"; };
-		486950A921303D0500DED227 /* CompletedTasksViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompletedTasksViewController.storyboard; sourceTree = "<group>"; };
 		486950AB21303D1800DED227 /* CompletedTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,7 +145,6 @@
 		17EDBDB121314DB0002B17F5 /* Trash */ = {
 			isa = PBXGroup;
 			children = (
-				17EDBDAF21314D92002B17F5 /* TrashViewController.storyboard */,
 				17EDBDB321314E33002B17F5 /* TrashViewController.swift */,
 			);
 			path = Trash;
@@ -162,7 +153,6 @@
 		17EDBDB521314E74002B17F5 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				17EDBDB621314E85002B17F5 /* SettingsViewController.storyboard */,
 				17EDBDB821314EFE002B17F5 /* SettingsViewController.swift */,
 			);
 			path = Settings;
@@ -237,7 +227,6 @@
 		486950A321303BB900DED227 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				486950A721303CEB00DED227 /* NotesViewController.storyboard */,
 				486950A521303CC200DED227 /* NotesViewController.swift */,
 			);
 			path = Notes;
@@ -246,7 +235,6 @@
 		486950A421303BD500DED227 /* Completed */ = {
 			isa = PBXGroup;
 			children = (
-				486950A921303D0500DED227 /* CompletedTasksViewController.storyboard */,
 				486950AB21303D1800DED227 /* CompletedTasksViewController.swift */,
 			);
 			path = Completed;
@@ -359,12 +347,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17EDBDB721314E85002B17F5 /* SettingsViewController.storyboard in Resources */,
 				48695095212FFF2A00DED227 /* AddScreenViewController.storyboard in Resources */,
-				486950AA21303D0500DED227 /* CompletedTasksViewController.storyboard in Resources */,
-				17EDBDB021314D92002B17F5 /* TrashViewController.storyboard in Resources */,
 				17E9EDC9212FD9E7007D56CB /* LaunchScreen.storyboard in Resources */,
-				486950A821303CEB00DED227 /* NotesViewController.storyboard in Resources */,
 				17E9EDC6212FD9E7007D56CB /* Assets.xcassets in Resources */,
 				17E9EDC4212FD9E7007D56CB /* HomeViewController.storyboard in Resources */,
 			);

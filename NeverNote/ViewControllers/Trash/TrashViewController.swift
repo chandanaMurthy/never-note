@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 class TrashViewController : UIViewController {
+    
+    let data : Bool = true
+    
+    
+    
     @IBAction func goHomeButton(_ sender: Any) {
         let homeViewController = UIViewController.home
         self.present(homeViewController, animated: true, completion: nil)
