@@ -9,42 +9,15 @@
 import UIKit
 
 class HomeViewController: UITabBarController {
-    let notes = NotesViewController()
-    let completed = CompletedTasksViewController()
-    let trash = TrashViewController()
-    let settings = SettingsViewController()
+    let notes = UIViewController.notes
+    let completed = UIViewController.completed
+    let trash = UIViewController.trash
+    let settings = UIViewController.settings
     
     @IBOutlet weak var trashButton: UITabBarItem!
     @IBOutlet weak var notesButton: UITabBarItem!
     @IBOutlet weak var settingsButton: UITabBarItem!
     @IBOutlet weak var completedButton: UITabBarItem!
-    
-    @IBAction func addNavigationButton(_ sender: Any?) {
-        let addScreenViewController = UIViewController.addScreen
-        self.present(addScreenViewController, animated: true, completion: nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        notes.tabBarItem = UITabBarItem(title: Constants.NOTES, image: #imageLiteral(resourceName: "Notes"), tag: 10)
-        
-        completed.tabBarItem = UITabBarItem(title: Constants.COMPLETED, image: #imageLiteral(resourceName: "Done"), tag: 12)
-        trash.tabBarItem = UITabBarItem(title: Constants.TRASH, image: #imageLiteral(resourceName: "Trash"), tag: 14)
-        settings.tabBarItem = UITabBarItem(title: Constants.SETTINGS, image: #imageLiteral(resourceName: "Settings"), tag: 16)
-        self.viewControllers = [notes, completed, trash, settings]
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        selectedIndex = 3
-    }
-    
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        //print(selectedIndex)
-    }
     
     override var selectedViewController: UIViewController? {
         didSet {
@@ -54,12 +27,28 @@ class HomeViewController: UITabBarController {
     
     override var selectedIndex: Int {
         didSet {
-            print(selectedIndex)
+            let notesViewController = UIViewController.notes
+            self.present(notesViewController, animated: true , completion: nil)
         }
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupTabBar()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    @IBAction func addNavigationButton(_ sender: Any?) {
+        let addScreenViewController = UIViewController.addScreen
+        self.present(addScreenViewController, animated: true, completion: nil)
+    }
+    
+    func setupTabBar() {
+        notes.tabBarItem = UITabBarItem(title: Constants.NOTES, image: #imageLiteral(resourceName: "Notes"), tag: 10)
+        completed.tabBarItem = UITabBarItem(title: Constants.COMPLETED, image: #imageLiteral(resourceName: "Done"), tag: 12)
+        trash.tabBarItem = UITabBarItem(title: Constants.TRASH, image: #imageLiteral(resourceName: "Trash"), tag: 14)
+        settings.tabBarItem = UITabBarItem(title: Constants.SETTINGS, image: #imageLiteral(resourceName: "Settings"), tag: 16)
+        self.viewControllers = [notes, completed, trash, settings]
     }
     
 }
