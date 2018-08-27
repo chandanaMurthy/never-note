@@ -37,7 +37,7 @@ extension UIViewController {
     static let NOTES_VIEW_CONTROLLER = "NotesViewController"
     static var notes : NotesViewController {
         get {
-            let notesStoryboard = UIStoryboard.notes
+            let notesStoryboard = UIStoryboard.home
             guard let notesViewController = notesStoryboard.instantiateViewController(withIdentifier: NotesViewController.NOTES_VIEW_CONTROLLER) as? NotesViewController else {
                 fatalError("There is no identifier set as \(NotesViewController.NOTES_VIEW_CONTROLLER)")
             }
@@ -48,7 +48,7 @@ extension UIViewController {
     static let COMPLETED_TASKS_VIEW_CONTROLLER = "CompletedTasksViewController"
     static var completed : CompletedTasksViewController {
         get {
-            let completedTasksStoryboard = UIStoryboard.completed
+            let completedTasksStoryboard = UIStoryboard.home
             guard let completedTasksViewController = completedTasksStoryboard.instantiateViewController(withIdentifier: CompletedTasksViewController.COMPLETED_TASKS_VIEW_CONTROLLER) as? CompletedTasksViewController else {
                 fatalError("There is no identifier set as \(CompletedTasksViewController.COMPLETED_TASKS_VIEW_CONTROLLER)")
             }
@@ -59,7 +59,7 @@ extension UIViewController {
     static let TRASH_VIEW_CONTROLLER = "TrashViewController"
     static var trash: TrashViewController {
         get {
-            let trashStoryboard = UIStoryboard.trash
+            let trashStoryboard = UIStoryboard.home
             guard let trashViewController = trashStoryboard.instantiateViewController(withIdentifier: TrashViewController.TRASH_VIEW_CONTROLLER) as? TrashViewController else {
                 fatalError("There is no identifier set as \(TrashViewController.TRASH_VIEW_CONTROLLER)")
             }
@@ -70,7 +70,7 @@ extension UIViewController {
     static let SETTINGS_VIEW_CONTROLLER = "SettingsViewController"
     static var settings: SettingsViewController {
         get {
-            let settingsStoryboard = UIStoryboard.settings
+            let settingsStoryboard = UIStoryboard.home
             guard let settingsViewController = settingsStoryboard.instantiateViewController(withIdentifier: SettingsViewController.SETTINGS_VIEW_CONTROLLER) as? SettingsViewController else {
                 fatalError("There is no identifier set as \(SettingsViewController.SETTINGS_VIEW_CONTROLLER)")
             }
