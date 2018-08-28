@@ -19,6 +19,8 @@ class HomeTabBarController: UITabBarController {
     let trashNavigationController = UIViewController.trashNavigationController
     let settingsNavigationController = UIViewController.settingsNavigationController
     
+    let addScreen = UIViewController.addScreen
+    
     override var selectedViewController: UIViewController? {
         didSet {
             print("VC \(selectedIndex)")

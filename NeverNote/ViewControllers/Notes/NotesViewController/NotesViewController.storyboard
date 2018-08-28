@@ -13,15 +13,30 @@
         <!--Notes View Controller-->
         <scene sceneID="eQn-Kp-2hV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C8z-Fu-xdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="NotesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QXX-3T-7Gw" customClass="NotesViewController" customModule="NeverNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0fR-zF-sVw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oIe-YS-4wY">
+                                <rect key="frame" x="16" y="44" width="343" height="734"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yLb-y1-tdh" firstAttribute="trailing" secondItem="oIe-YS-4wY" secondAttribute="trailing" constant="16" id="Nui-tj-ZAu"/>
+                            <constraint firstItem="oIe-YS-4wY" firstAttribute="leading" secondItem="yLb-y1-tdh" secondAttribute="leading" constant="16" id="Sjt-yk-Osk"/>
+                            <constraint firstItem="oIe-YS-4wY" firstAttribute="bottom" secondItem="yLb-y1-tdh" secondAttribute="bottom" id="hi1-5n-kLq"/>
+                            <constraint firstItem="oIe-YS-4wY" firstAttribute="top" secondItem="yLb-y1-tdh" secondAttribute="top" id="xNN-78-bys"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yLb-y1-tdh"/>
                     </view>
+                    <connections>
+                        <outlet property="notesTableView" destination="oIe-YS-4wY" id="nKc-na-aBZ"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C8z-Fu-xdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="124" y="96.798029556650249"/>
         </scene>

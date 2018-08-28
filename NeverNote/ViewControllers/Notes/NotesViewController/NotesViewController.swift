@@ -11,6 +11,12 @@ import UIKit
 
 class NotesViewController: UIViewController {
     let NAVIGATION_BAR_TITLE = "Notes"
+    let BACK_BUTTON_TITLE = "Back"
+    let CELL_IDENTIFIER = "cellIdentifier"
+    
+    var taskData: [String]!
+    
+    @IBOutlet weak var notesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +31,7 @@ class NotesViewController: UIViewController {
     @objc func didTapRightBarButton(_ sender: Any?) {
         //self.navigationController?.pushViewController(UIViewController.addScreen, animated: true)
         
-        let addScreeen = UIStoryboard(name: "AddScreenNavigationController", bundle: nil).instantiateViewController(withIdentifier: "AddScreenNavigationController") as? AddScreenNavigationController
-        self.present(addScreeen!, animated: true, completion: nil)
+        self.present(UIViewController.addScreen, animated: true, completion: nil)
     }
     
     func configureNavigationBar() {
@@ -36,6 +41,20 @@ class NotesViewController: UIViewController {
         rightNavBarButton.tintColor = UIColor.white
         self.navigationItem.rightBarButtonItem = rightNavBarButton
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: BACK_BUTTON_TITLE, style: UIBarButtonItemStyle.plain, target: nil, action: nil)
     }
+}
+
+extension NotesViewController : UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return taskData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = notesTableView.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER, for: indexPath)
+        cell.textLabel?.text = taskData[indexPath.row]
+        return cell
+    }
+    
+    
 }
