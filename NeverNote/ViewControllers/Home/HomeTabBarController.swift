@@ -19,11 +19,6 @@ class HomeTabBarController: UITabBarController {
     let trashNavigationController = UIViewController.trashNavigationController
     let settingsNavigationController = UIViewController.settingsNavigationController
     
-    @IBOutlet weak var trashButton: UITabBarItem!
-    @IBOutlet weak var notesButton: UITabBarItem!
-    @IBOutlet weak var settingsButton: UITabBarItem!
-    @IBOutlet weak var completedButton: UITabBarItem!
-    
     override var selectedViewController: UIViewController? {
         didSet {
             print("VC \(selectedIndex)")
@@ -32,8 +27,6 @@ class HomeTabBarController: UITabBarController {
     
     override var selectedIndex: Int {
         didSet {
-            //let notesViewController = UIViewController.notes
-            //self.present(notesViewController, animated: true , completion: nil)
         }
     }
     

@@ -9,10 +9,10 @@
 import Foundation
 
 class Constants {
-    static var PLACEHOLDER_TEXTFIELD = "title"
-    static var PLACEHOLDER_TEXTVIEW = "task description"
-    static var NOTES = "notes"
+    static var PLACEHOLDER_TEXTFIELD = "Title"
+    static var PLACEHOLDER_TEXTVIEW = "Task Description"
+    static var NOTES = "Notes"
     static var COMPLETED = "Completed"
-    static var TRASH = "trash"
-    static var SETTINGS = "settings"
+    static var TRASH = "Trash"
+    static var SETTINGS = "Settings"
 }
