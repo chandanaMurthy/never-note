@@ -21,11 +21,18 @@ class AddScreenViewController: UIViewController {
     }
     
     func configureAddScreenNavBar() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(dismissAddScreen))
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(addNote))
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(dismissAddScreen))
     }
     
     @objc func dismissAddScreen() {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func addNote() {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

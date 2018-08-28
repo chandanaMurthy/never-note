@@ -23,7 +23,10 @@ class NotesViewController: UIViewController {
     }
     
     @objc func didTapRightBarButton(_ sender: Any?) {
-        self.navigationController?.pushViewController(UIViewController.addScreen, animated: true)
+        //self.navigationController?.pushViewController(UIViewController.addScreen, animated: true)
+        
+        let addScreeen = UIStoryboard(name: "AddScreenNavigationController", bundle: nil).instantiateViewController(withIdentifier: "AddScreenNavigationController") as? AddScreenNavigationController
+        self.present(addScreeen!, animated: true, completion: nil)
     }
     
     func configureNavigationBar() {
