@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import UIKit
+
+class SettingsNavigationController : UINavigationController {
+    let settingViewController = UIViewController.settings
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.viewControllers = [settingViewController]
+    }
+}

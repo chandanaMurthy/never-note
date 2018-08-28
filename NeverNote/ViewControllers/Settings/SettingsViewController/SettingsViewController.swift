@@ -10,9 +10,5 @@ import Foundation
 import UIKit
 
 class SettingsViewController : UIViewController {
-    @IBAction func goHomeButton(_ sender: Any) {
-        let homeViewController = UIViewController.home
-        self.present(homeViewController, animated: true, completion: nil)
-    }
     
 }

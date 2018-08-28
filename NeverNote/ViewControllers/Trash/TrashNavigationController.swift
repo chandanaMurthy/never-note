@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import UIKit
+
+class TrashNavigationController : UINavigationController {
+    let trashViewController = UIViewController.trash
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.viewControllers = [trashViewController]
+    }
+}
