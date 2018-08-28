@@ -17,16 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="NeverNote" translatesAutoresizingMaskIntoConstraints="NO" id="6gY-wo-1GJ">
-                                <rect key="frame" x="67" y="342" width="240" height="128"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" red="0.090196078431372548" green="0.45490196078431372" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6gY-wo-1GJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Wre-z5-tky"/>
-                            <constraint firstItem="6gY-wo-1GJ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hG2-LD-lLy"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -35,7 +26,4 @@
             <point key="canvasLocation" x="52" y="374.6305418719212"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="NeverNote" width="25" height="25"/>
-    </resources>
 </document>
