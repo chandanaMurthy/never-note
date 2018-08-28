@@ -10,6 +10,7 @@ import UIKit
 
 class NotesNavigationController: UINavigationController {
     let notesViewController = UIViewController.notes
+    let addScreenViewController = UIViewController.addScreen
 
     override func viewDidLoad() {
         super.viewDidLoad()

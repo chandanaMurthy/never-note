@@ -21,6 +21,7 @@ class NotesViewController: UIViewController {
     }
     
     @objc func didTapRightBarButton(_ sender: Any?) {
+        self.present(UIViewController.addScreen, animated: true, completion: nil)
         
     }
 }
