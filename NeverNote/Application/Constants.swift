@@ -14,5 +14,6 @@ class Constants {
     static var NOTES = "notes"
     static var COMPLETED = "Completed"
     static var TRASH = "trash"
-    static var SETTINGS = "settings"
+    static let SETTINGS = "settings"
+    static let ADD_SCREEN = "Add New Note"
 }

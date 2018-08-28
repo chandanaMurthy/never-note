@@ -16,7 +16,16 @@ class AddScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //titletextField.placeholder = Constants.PLACEHOLDER_TEXTFIELD
+        self.navigationItem.title = Constants.ADD_SCREEN
+        self.configureAddScreenNavBar()
+    }
+    
+    func configureAddScreenNavBar() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(dismissAddScreen))
+    }
+    
+    @objc func dismissAddScreen() {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
