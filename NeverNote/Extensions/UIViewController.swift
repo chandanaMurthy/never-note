@@ -70,6 +70,13 @@ extension UIViewController {
         }
     }
     
+    static let NOTES_NAVIGATION_CONTROLLER = "NotesNavigationController"
+    static var notesNavigationController: NotesNavigationController {
+        get {
+            return UIViewController.instantiateFromStoryboard(storyboard: UIStoryboard.notesNavigationController, identifier: NOTES_NAVIGATION_CONTROLLER, to: NotesNavigationController.self)
+        }
+    }
+    
     private static func instantiateFromStoryboard<T:UIViewController>(storyboard : UIStoryboard, identifier : String, to type : T.Type) -> T {
         guard let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? T else {
             fatalError("There is no identifier set as \(identifier)")

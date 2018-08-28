@@ -9,9 +9,11 @@
 import UIKit
 
 class NotesNavigationController: UINavigationController {
+    let notesViewController = UIViewController.notes
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewControllers = [notesViewController]
         // Do any additional setup after loading the view.
     }
 

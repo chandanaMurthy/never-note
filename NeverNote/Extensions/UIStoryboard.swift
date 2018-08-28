@@ -51,4 +51,11 @@ extension UIStoryboard {
             return UIStoryboard(name: SETTINGS_VIEW_CONTROLLER, bundle: nil)
         }
     }
+    
+    private static let NOTES_NAVIGATION_CONTROLLER = "NotesNavigationController"
+    static var notesNavigationController : UIStoryboard {
+        get {
+            return UIStoryboard(name: NOTES_NAVIGATION_CONTROLLER, bundle: nil)
+        }
+    }
 }
