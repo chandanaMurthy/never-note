@@ -58,4 +58,25 @@ extension UIStoryboard {
             return UIStoryboard(name: NOTES_NAVIGATION_CONTROLLER, bundle: nil)
         }
     }
+    
+    private static let TRASH_NAVIGATION_CONTROLLER = "TrashNavigationController"
+    static var trashNavigationController : UIStoryboard {
+        get {
+            return UIStoryboard(name: TRASH_NAVIGATION_CONTROLLER, bundle: nil)
+        }
+    }
+    
+    private static let COMPLETED_NAVIGATION_CONTROLLER = "CompletedNavigationController"
+    static var completedNavigationController : UIStoryboard {
+        get {
+            return UIStoryboard(name: COMPLETED_NAVIGATION_CONTROLLER, bundle: nil)
+        }
+    }
+    
+    private static let SETTINGS_NAVIGATION_CONTROLLER = "SettingsNavigationController"
+    static var settingsNavigationController : UIStoryboard {
+        get {
+            return UIStoryboard(name: SETTINGS_NAVIGATION_CONTROLLER, bundle: nil)
+        }
+    }
 }

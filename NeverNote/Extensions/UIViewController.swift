@@ -72,6 +72,13 @@ extension UIViewController {
             return UIViewController.instantiateFromStoryboard(storyboard: UIStoryboard.settingsNavigationController, identifier: SETTINGS_NAVIGATION_CONTROLLER, to: SettingsNavigationController.self)
         }
     }
+
+    static let TRASH_NAVIGATION_CONTROLLER = "TrashNavigationController"
+    static var trashNavigationController: TrashNavigationController {
+        get {
+            return UIViewController.instantiateFromStoryboard(storyboard: UIStoryboard.trashNavigationController, identifier: TRASH_NAVIGATION_CONTROLLER, to: TrashNavigationController.self)
+        }
+    }
     
     private static func instantiateFromStoryboard<T:UIViewController>(storyboard : UIStoryboard, identifier : String, to type : T.Type) -> T {
         guard let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? T else {
