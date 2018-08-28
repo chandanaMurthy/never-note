@@ -10,25 +10,17 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    static let HOME_VIEW_CONTROLLER = "HomeViewController"
-    static var home : HomeViewController {
+    private static let HOME_VIEW_CONTROLLER = "HomeViewController"
+    static var home : HomeTabBarController {
         get {
-            let homeStoryboard = UIStoryboard.home
-            guard let homeViewController = homeStoryboard.instantiateViewController(withIdentifier: HomeViewController.HOME_VIEW_CONTROLLER) as? HomeViewController else {
-                fatalError("There is no identifier set as \(HomeViewController.HOME_VIEW_CONTROLLER)")
-            }
-            return homeViewController
+            return UIViewController.instantiateFromStoryboard(storyboard: UIStoryboard.home, identifier: HOME_VIEW_CONTROLLER, to: HomeTabBarController.self)
         }
     }
     
     static let ADD_SCREEN_VIEW_CONTROLLER = "AddScreenViewController"
     static var addScreen : AddScreenViewController {
         get {
-            let addScreenStoryboard = UIStoryboard.addScreen
-            guard let addScreenViewController = addScreenStoryboard.instantiateViewController(withIdentifier: AddScreenViewController.ADD_SCREEN_VIEW_CONTROLLER) as? AddScreenViewController else {
-                fatalError("There is no identifier set as \(AddScreenViewController.ADD_SCREEN_VIEW_CONTROLLER)")
-            }
-            return addScreenViewController
+            return UIViewController.instantiateFromStoryboard(storyboard: UIStoryboard.addScreen, identifier: ADD_SCREEN_VIEW_CONTROLLER, to: AddScreenViewController.self)
         }
     }
     
@@ -65,6 +57,8 @@ extension UIViewController {
         }
     }
     
+    
+    
     static let SETTINGS_VIEW_CONTROLLER = "SettingsViewController"
     static var settings: SettingsViewController {
         get {
@@ -74,5 +68,12 @@ extension UIViewController {
             }
             return settingsViewController
         }
+    }
+    
+    private static func instantiateFromStoryboard<T:UIViewController>(storyboard : UIStoryboard, identifier : String, to type : T.Type) -> T {
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? T else {
+            fatalError("There is no identifier set as \(identifier)")
+        }
+        return viewController
     }
 }

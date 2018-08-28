@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1758ED3C21303D0A00618E51 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1758ED3B21303D0A00618E51 /* Constants.swift */; };
 		17E9EDBF212FD9E7007D56CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9EDBE212FD9E7007D56CB /* AppDelegate.swift */; };
-		17E9EDC1212FD9E7007D56CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9EDC0212FD9E7007D56CB /* HomeViewController.swift */; };
+		17E9EDC1212FD9E7007D56CB /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9EDC0212FD9E7007D56CB /* HomeTabBarController.swift */; };
 		17E9EDC4212FD9E7007D56CB /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E9EDC2212FD9E7007D56CB /* HomeViewController.storyboard */; };
 		17E9EDC6212FD9E7007D56CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17E9EDC5212FD9E7007D56CB /* Assets.xcassets */; };
 		17E9EDC9212FD9E7007D56CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E9EDC7212FD9E7007D56CB /* LaunchScreen.storyboard */; };
@@ -27,6 +27,8 @@
 		486950A821303CEB00DED227 /* NotesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486950A721303CEB00DED227 /* NotesViewController.storyboard */; };
 		486950AA21303D0500DED227 /* CompletedTasksViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486950A921303D0500DED227 /* CompletedTasksViewController.storyboard */; };
 		486950AC21303D1800DED227 /* CompletedTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486950AB21303D1800DED227 /* CompletedTasksViewController.swift */; };
+		486BF2762134329700363775 /* NotesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BF2752134329700363775 /* NotesNavigationController.swift */; };
+		486BF2782134350A00363775 /* NotesNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486BF2772134350A00363775 /* NotesNavigationController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,7 @@
 		1758ED3B21303D0A00618E51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		17E9EDBB212FD9E7007D56CB /* NeverNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeverNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E9EDBE212FD9E7007D56CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17E9EDC0212FD9E7007D56CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		17E9EDC0212FD9E7007D56CB /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		17E9EDC3212FD9E7007D56CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeViewController.storyboard; sourceTree = "<group>"; };
 		17E9EDC5212FD9E7007D56CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17E9EDC8212FD9E7007D56CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,6 +75,8 @@
 		486950A721303CEB00DED227 /* NotesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotesViewController.storyboard; sourceTree = "<group>"; };
 		486950A921303D0500DED227 /* CompletedTasksViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompletedTasksViewController.storyboard; sourceTree = "<group>"; };
 		486950AB21303D1800DED227 /* CompletedTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksViewController.swift; sourceTree = "<group>"; };
+		486BF2752134329700363775 /* NotesNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesNavigationController.swift; sourceTree = "<group>"; };
+		486BF2772134350A00363775 /* NotesNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotesNavigationController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,7 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				17E9EDC2212FD9E7007D56CB /* HomeViewController.storyboard */,
-				17E9EDC0212FD9E7007D56CB /* HomeViewController.swift */,
+				17E9EDC0212FD9E7007D56CB /* HomeTabBarController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -237,8 +241,8 @@
 		486950A321303BB900DED227 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				486950A721303CEB00DED227 /* NotesViewController.storyboard */,
-				486950A521303CC200DED227 /* NotesViewController.swift */,
+				486BF2792134367700363775 /* NotesViewController */,
+				486BF27A2134369700363775 /* NotesNavigationController */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -250,6 +254,24 @@
 				486950AB21303D1800DED227 /* CompletedTasksViewController.swift */,
 			);
 			path = Completed;
+			sourceTree = "<group>";
+		};
+		486BF2792134367700363775 /* NotesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				486950A721303CEB00DED227 /* NotesViewController.storyboard */,
+				486950A521303CC200DED227 /* NotesViewController.swift */,
+			);
+			path = NotesViewController;
+			sourceTree = "<group>";
+		};
+		486BF27A2134369700363775 /* NotesNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				486BF2772134350A00363775 /* NotesNavigationController.storyboard */,
+				486BF2752134329700363775 /* NotesNavigationController.swift */,
+			);
+			path = NotesNavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +388,7 @@
 				17E9EDC9212FD9E7007D56CB /* LaunchScreen.storyboard in Resources */,
 				486950A821303CEB00DED227 /* NotesViewController.storyboard in Resources */,
 				17E9EDC6212FD9E7007D56CB /* Assets.xcassets in Resources */,
+				486BF2782134350A00363775 /* NotesNavigationController.storyboard in Resources */,
 				17E9EDC4212FD9E7007D56CB /* HomeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,8 +414,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17E9EDC1212FD9E7007D56CB /* HomeViewController.swift in Sources */,
+				17E9EDC1212FD9E7007D56CB /* HomeTabBarController.swift in Sources */,
 				17E9EDBF212FD9E7007D56CB /* AppDelegate.swift in Sources */,
+				486BF2762134329700363775 /* NotesNavigationController.swift in Sources */,
 				48695097212FFFD800DED227 /* AddScreenViewController.swift in Sources */,
 				17EDBDB921314EFE002B17F5 /* SettingsViewController.swift in Sources */,
 				17EDBDB421314E33002B17F5 /* TrashViewController.swift in Sources */,

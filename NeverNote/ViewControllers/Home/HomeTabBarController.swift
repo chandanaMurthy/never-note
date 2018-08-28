@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UITabBarController {
+class HomeTabBarController: UITabBarController {
     let notes = UIViewController.notes
     let completed = UIViewController.completed
     let trash = UIViewController.trash
@@ -27,8 +27,8 @@ class HomeViewController: UITabBarController {
     
     override var selectedIndex: Int {
         didSet {
-            let notesViewController = UIViewController.notes
-            self.present(notesViewController, animated: true , completion: nil)
+            //let notesViewController = UIViewController.notes
+            //self.present(notesViewController, animated: true , completion: nil)
         }
     }
     
@@ -36,11 +36,6 @@ class HomeViewController: UITabBarController {
         super.viewDidLoad()
         setupTabBar()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    @IBAction func addNavigationButton(_ sender: Any?) {
-        let addScreenViewController = UIViewController.addScreen
-        self.present(addScreenViewController, animated: true, completion: nil)
     }
     
     func setupTabBar() {
