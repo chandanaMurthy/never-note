@@ -14,6 +14,8 @@ class HomeTabBarController: UITabBarController {
     let trash = UIViewController.trash
     let settings = UIViewController.settings
     
+    let notesNavigationController = UIViewController.notesNavigationController
+    
     @IBOutlet weak var trashButton: UITabBarItem!
     @IBOutlet weak var notesButton: UITabBarItem!
     @IBOutlet weak var settingsButton: UITabBarItem!
@@ -39,11 +41,11 @@ class HomeTabBarController: UITabBarController {
     }
     
     func setupTabBar() {
-        notes.tabBarItem = UITabBarItem(title: Constants.NOTES, image: #imageLiteral(resourceName: "Notes"), tag: 10)
+        notesNavigationController.tabBarItem = UITabBarItem(title: Constants.NOTES, image: #imageLiteral(resourceName: "Notes"), tag: 10)
         completed.tabBarItem = UITabBarItem(title: Constants.COMPLETED, image: #imageLiteral(resourceName: "Done"), tag: 12)
         trash.tabBarItem = UITabBarItem(title: Constants.TRASH, image: #imageLiteral(resourceName: "Trash"), tag: 14)
         settings.tabBarItem = UITabBarItem(title: Constants.SETTINGS, image: #imageLiteral(resourceName: "Settings"), tag: 16)
-        self.viewControllers = [notes, completed, trash, settings]
+        self.viewControllers = [notesNavigationController, completed, trash, settings]
     }
     
 }
