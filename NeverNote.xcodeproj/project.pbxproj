@@ -19,6 +19,12 @@
 		17EDBDB421314E33002B17F5 /* TrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EDBDB321314E33002B17F5 /* TrashViewController.swift */; };
 		17EDBDB721314E85002B17F5 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EDBDB621314E85002B17F5 /* SettingsViewController.storyboard */; };
 		17EDBDB921314EFE002B17F5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EDBDB821314EFE002B17F5 /* SettingsViewController.swift */; };
+		17F623722135176000085518 /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F623712135176000085518 /* SettingsNavigationController.swift */; };
+		17F623742135177500085518 /* SettingsNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F623732135177500085518 /* SettingsNavigationController.storyboard */; };
+		17F62376213517A200085518 /* TrashNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F62375213517A200085518 /* TrashNavigationController.storyboard */; };
+		17F62378213517AD00085518 /* TrashNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F62377213517AD00085518 /* TrashNavigationController.swift */; };
+		17F6237A213517C000085518 /* CompletedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F62379213517C000085518 /* CompletedNavigationController.swift */; };
+		17F6237C213517C900085518 /* CompletedNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F6237B213517C900085518 /* CompletedNavigationController.storyboard */; };
 		48695095212FFF2A00DED227 /* AddScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48695094212FFF2A00DED227 /* AddScreenViewController.storyboard */; };
 		48695097212FFFD800DED227 /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48695096212FFFD800DED227 /* AddScreenViewController.swift */; };
 		486950A02130266800DED227 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869509F2130266800DED227 /* UIStoryboard.swift */; };
@@ -67,6 +73,12 @@
 		17EDBDB321314E33002B17F5 /* TrashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashViewController.swift; sourceTree = "<group>"; };
 		17EDBDB621314E85002B17F5 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		17EDBDB821314EFE002B17F5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		17F623712135176000085518 /* SettingsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
+		17F623732135177500085518 /* SettingsNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsNavigationController.storyboard; sourceTree = "<group>"; };
+		17F62375213517A200085518 /* TrashNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrashNavigationController.storyboard; sourceTree = "<group>"; };
+		17F62377213517AD00085518 /* TrashNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashNavigationController.swift; sourceTree = "<group>"; };
+		17F62379213517C000085518 /* CompletedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedNavigationController.swift; sourceTree = "<group>"; };
+		17F6237B213517C900085518 /* CompletedNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompletedNavigationController.storyboard; sourceTree = "<group>"; };
 		48695094212FFF2A00DED227 /* AddScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddScreenViewController.storyboard; sourceTree = "<group>"; };
 		48695096212FFFD800DED227 /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
 		4869509F2130266800DED227 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
@@ -157,8 +169,8 @@
 		17EDBDB121314DB0002B17F5 /* Trash */ = {
 			isa = PBXGroup;
 			children = (
-				17EDBDAF21314D92002B17F5 /* TrashViewController.storyboard */,
-				17EDBDB321314E33002B17F5 /* TrashViewController.swift */,
+				17F6236F2135159100085518 /* TrashNavigationController */,
+				17F6236D2135155500085518 /* TrashViewController */,
 			);
 			path = Trash;
 			sourceTree = "<group>";
@@ -166,10 +178,64 @@
 		17EDBDB521314E74002B17F5 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				17F6236C213514E600085518 /* SettingsNavigationController */,
+				17F6236B213514CF00085518 /* SettingsViewController */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		17F6236B213514CF00085518 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
 				17EDBDB621314E85002B17F5 /* SettingsViewController.storyboard */,
 				17EDBDB821314EFE002B17F5 /* SettingsViewController.swift */,
 			);
-			path = Settings;
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		17F6236C213514E600085518 /* SettingsNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				17F623712135176000085518 /* SettingsNavigationController.swift */,
+				17F623732135177500085518 /* SettingsNavigationController.storyboard */,
+			);
+			path = SettingsNavigationController;
+			sourceTree = "<group>";
+		};
+		17F6236D2135155500085518 /* TrashViewController */ = {
+			isa = PBXGroup;
+			children = (
+				17EDBDAF21314D92002B17F5 /* TrashViewController.storyboard */,
+				17EDBDB321314E33002B17F5 /* TrashViewController.swift */,
+			);
+			name = TrashViewController;
+			sourceTree = "<group>";
+		};
+		17F6236E2135157000085518 /* CompletedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				486950A921303D0500DED227 /* CompletedTasksViewController.storyboard */,
+				486950AB21303D1800DED227 /* CompletedTasksViewController.swift */,
+			);
+			path = CompletedViewController;
+			sourceTree = "<group>";
+		};
+		17F6236F2135159100085518 /* TrashNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				17F62375213517A200085518 /* TrashNavigationController.storyboard */,
+				17F62377213517AD00085518 /* TrashNavigationController.swift */,
+			);
+			name = TrashNavigationController;
+			sourceTree = "<group>";
+		};
+		17F62370213515A500085518 /* CompletedNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				17F62379213517C000085518 /* CompletedNavigationController.swift */,
+				17F6237B213517C900085518 /* CompletedNavigationController.storyboard */,
+			);
+			path = CompletedNavigationController;
 			sourceTree = "<group>";
 		};
 		48695098213025D400DED227 /* ViewControllers */ = {
@@ -250,8 +316,8 @@
 		486950A421303BD500DED227 /* Completed */ = {
 			isa = PBXGroup;
 			children = (
-				486950A921303D0500DED227 /* CompletedTasksViewController.storyboard */,
-				486950AB21303D1800DED227 /* CompletedTasksViewController.swift */,
+				17F62370213515A500085518 /* CompletedNavigationController */,
+				17F6236E2135157000085518 /* CompletedViewController */,
 			);
 			path = Completed;
 			sourceTree = "<group>";
@@ -381,12 +447,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F6237C213517C900085518 /* CompletedNavigationController.storyboard in Resources */,
 				17EDBDB721314E85002B17F5 /* SettingsViewController.storyboard in Resources */,
+				17F623742135177500085518 /* SettingsNavigationController.storyboard in Resources */,
 				48695095212FFF2A00DED227 /* AddScreenViewController.storyboard in Resources */,
 				486950AA21303D0500DED227 /* CompletedTasksViewController.storyboard in Resources */,
 				17EDBDB021314D92002B17F5 /* TrashViewController.storyboard in Resources */,
 				17E9EDC9212FD9E7007D56CB /* LaunchScreen.storyboard in Resources */,
 				486950A821303CEB00DED227 /* NotesViewController.storyboard in Resources */,
+				17F62376213517A200085518 /* TrashNavigationController.storyboard in Resources */,
 				17E9EDC6212FD9E7007D56CB /* Assets.xcassets in Resources */,
 				486BF2782134350A00363775 /* NotesNavigationController.storyboard in Resources */,
 				17E9EDC4212FD9E7007D56CB /* HomeViewController.storyboard in Resources */,
@@ -416,6 +485,7 @@
 			files = (
 				17E9EDC1212FD9E7007D56CB /* HomeTabBarController.swift in Sources */,
 				17E9EDBF212FD9E7007D56CB /* AppDelegate.swift in Sources */,
+				17F623722135176000085518 /* SettingsNavigationController.swift in Sources */,
 				486BF2762134329700363775 /* NotesNavigationController.swift in Sources */,
 				48695097212FFFD800DED227 /* AddScreenViewController.swift in Sources */,
 				17EDBDB921314EFE002B17F5 /* SettingsViewController.swift in Sources */,
@@ -424,6 +494,8 @@
 				486950A02130266800DED227 /* UIStoryboard.swift in Sources */,
 				486950AC21303D1800DED227 /* CompletedTasksViewController.swift in Sources */,
 				486950A22130279300DED227 /* UIViewController.swift in Sources */,
+				17F6237A213517C000085518 /* CompletedNavigationController.swift in Sources */,
+				17F62378213517AD00085518 /* TrashNavigationController.swift in Sources */,
 				486950A621303CC200DED227 /* NotesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
