@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+class CompletedNavigationController : UINavigationController {
+    let completedViewController = UIViewController.completed
+    
+    override func viewDidLoad() {
+        self.viewControllers = [completedViewController]
+    }
+}

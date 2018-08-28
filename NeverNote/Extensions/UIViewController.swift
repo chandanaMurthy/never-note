@@ -59,6 +59,20 @@ extension UIViewController {
         }
     }
     
+    static let COMPLETED_NAVIGATION_CONTROLLER = "CompletedNavigationController"
+    static var completedNavigationController: CompletedNavigationController {
+        get {
+            return UIViewController.instantiateFromStoryboard(storyboard: UIStoryboard.completedNavigationController, identifier: COMPLETED_NAVIGATION_CONTROLLER, to: CompletedNavigationController.self)
+        }
+    }
+    
+    static let SETTINGS_NAVIGATION_CONTROLLER = "SettingsNavigationController"
+    static var settingsNavigationController: SettingsNavigationController {
+        get {
+            return UIViewController.instantiateFromStoryboard(storyboard: UIStoryboard.settingsNavigationController, identifier: SETTINGS_NAVIGATION_CONTROLLER, to: SettingsNavigationController.self)
+        }
+    }
+    
     private static func instantiateFromStoryboard<T:UIViewController>(storyboard : UIStoryboard, identifier : String, to type : T.Type) -> T {
         guard let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? T else {
             fatalError("There is no identifier set as \(identifier)")
