@@ -11,4 +11,8 @@ import UIKit
 
 class TrashViewController : UIViewController {
     
+    override func viewDidLoad() {
+        self.navigationItem.title = Constants.TRASH
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+    }
 }

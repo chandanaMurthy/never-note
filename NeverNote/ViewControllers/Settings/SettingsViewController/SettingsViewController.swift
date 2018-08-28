@@ -10,5 +10,8 @@ import Foundation
 import UIKit
 
 class SettingsViewController : UIViewController {
-    
+    override func viewDidLoad() {
+        self.navigationItem.title = Constants.SETTINGS
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+    }
 }

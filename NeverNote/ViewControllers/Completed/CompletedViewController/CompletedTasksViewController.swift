@@ -11,4 +11,8 @@ import UIKit
 
 class CompletedTasksViewController: UIViewController {
     
+    override func viewDidLoad() {
+        self.navigationItem.title = Constants.COMPLETED
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+    }
 }
