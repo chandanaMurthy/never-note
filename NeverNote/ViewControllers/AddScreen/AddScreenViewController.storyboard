@@ -13,31 +13,17 @@
         <!--Add Screen View Controller-->
         <scene sceneID="ttD-5U-BPR">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8j-Bq-fGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AddScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zxv-c3-tBf" customClass="AddScreenViewController" customModule="NeverNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hfc-3v-iOR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPK-Od-pA9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
-                                <color key="backgroundColor" red="0.090196078430000007" green="0.4549019608" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="NuD-id-VOZ"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="fPK-Od-pA9" firstAttribute="leading" secondItem="6d0-lA-4qH" secondAttribute="leading" id="s8L-za-H4s"/>
-                            <constraint firstItem="fPK-Od-pA9" firstAttribute="trailing" secondItem="6d0-lA-4qH" secondAttribute="trailing" id="vUl-iM-EW1"/>
-                            <constraint firstItem="fPK-Od-pA9" firstAttribute="top" secondItem="Hfc-3v-iOR" secondAttribute="top" id="yZ1-nI-Tw4"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6d0-lA-4qH"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A8j-Bq-fGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.7101449275362" y="44.021739130434788"/>
+            <point key="canvasLocation" x="1082" y="45"/>
         </scene>
     </scenes>
 </document>
