@@ -27,46 +27,28 @@ extension UIViewController {
     static let NOTES_VIEW_CONTROLLER = "NotesViewController"
     static var notes : NotesViewController {
         get {
-            let notesStoryboard = UIStoryboard.notes
-            guard let notesViewController = notesStoryboard.instantiateViewController(withIdentifier: NotesViewController.NOTES_VIEW_CONTROLLER) as? NotesViewController else {
-                fatalError("There is no identifier set as \(NotesViewController.NOTES_VIEW_CONTROLLER)")
-            }
-            return notesViewController
+            return UIViewController.instantiateFromStoryboard(storyboard: UIStoryboard.notes, identifier: NOTES_VIEW_CONTROLLER, to: NotesViewController.self)
         }
     }
     
     static let COMPLETED_TASKS_VIEW_CONTROLLER = "CompletedTasksViewController"
     static var completed : CompletedTasksViewController {
         get {
-            let completedTasksStoryboard = UIStoryboard.completed
-            guard let completedTasksViewController = completedTasksStoryboard.instantiateViewController(withIdentifier: CompletedTasksViewController.COMPLETED_TASKS_VIEW_CONTROLLER) as? CompletedTasksViewController else {
-                fatalError("There is no identifier set as \(CompletedTasksViewController.COMPLETED_TASKS_VIEW_CONTROLLER)")
-            }
-            return completedTasksViewController
+            return UIViewController.instantiateFromStoryboard(storyboard: UIStoryboard.completed, identifier: COMPLETED_TASKS_VIEW_CONTROLLER, to: CompletedTasksViewController.self)
         }
     }
     
     static let TRASH_VIEW_CONTROLLER = "TrashViewController"
     static var trash: TrashViewController {
         get {
-            let trashStoryboard = UIStoryboard.trash
-            guard let trashViewController = trashStoryboard.instantiateViewController(withIdentifier: TrashViewController.TRASH_VIEW_CONTROLLER) as? TrashViewController else {
-                fatalError("There is no identifier set as \(TrashViewController.TRASH_VIEW_CONTROLLER)")
-            }
-            return trashViewController
+            return UIViewController.instantiateFromStoryboard(storyboard: UIStoryboard.trash, identifier: TRASH_VIEW_CONTROLLER, to: TrashViewController.self)
         }
     }
-    
-    
-    
+
     static let SETTINGS_VIEW_CONTROLLER = "SettingsViewController"
     static var settings: SettingsViewController {
         get {
-            let settingsStoryboard = UIStoryboard.settings
-            guard let settingsViewController = settingsStoryboard.instantiateViewController(withIdentifier: SettingsViewController.SETTINGS_VIEW_CONTROLLER) as? SettingsViewController else {
-                fatalError("There is no identifier set as \(SettingsViewController.SETTINGS_VIEW_CONTROLLER)")
-            }
-            return settingsViewController
+            return UIViewController.instantiateFromStoryboard(storyboard: UIStoryboard.settings, identifier: SETTINGS_VIEW_CONTROLLER, to: SettingsViewController.self)
         }
     }
     
