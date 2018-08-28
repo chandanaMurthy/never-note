@@ -59,6 +59,13 @@ extension UIViewController {
         }
     }
     
+    static let TRASH_NAVIGATION_CONTROLLER = "TrashNavigationController"
+    static var trashNavigationController: TrashNavigationController {
+        get {
+            return UIViewController.instantiateFromStoryboard(storyboard: UIStoryboard.trashNavigationController, identifier: TRASH_NAVIGATION_CONTROLLER, to: TrashNavigationController.self)
+        }
+    }
+    
     private static func instantiateFromStoryboard<T:UIViewController>(storyboard : UIStoryboard, identifier : String, to type : T.Type) -> T {
         guard let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? T else {
             fatalError("There is no identifier set as \(identifier)")
