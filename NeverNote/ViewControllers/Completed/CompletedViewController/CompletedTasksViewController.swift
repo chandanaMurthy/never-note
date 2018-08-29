@@ -13,16 +13,20 @@ class CompletedTasksViewController: UIViewController {
         completedTasksTableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.REUSE_IDENTIFIER)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.title = Constants.COMPLETED
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+    func addToCompletedTableView() {
         completedTasks.append("Hello")
         completedTasks.append("Hello")
         completedTasks.append("Hello")
         let indexPath = IndexPath(row: completedTasks.count-1, section: 0)
         self.completedTasksTableView.insertRows(at: [indexPath], with: .top)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.title = Constants.COMPLETED
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         setupTableView()
+        addToCompletedTableView()
     }
 }
 
