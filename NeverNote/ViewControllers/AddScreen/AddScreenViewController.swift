@@ -18,22 +18,6 @@ class AddScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureAddScreenNavBar()
-    }
-    
-    func configureAddScreenNavBar() {
-        self.navigationItem.title = Constants.ADD_SCREEN
-        let addNoteButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(addNoteButtonTapped))
-        self.navigationItem.rightBarButtonItem = addNoteButton
-        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(cancelButtonnTapped))
-        self.navigationItem.leftBarButtonItem = cancelButton
-    }
-    
-    @objc func cancelButtonnTapped() {
-    }
-    
-    @objc func addNoteButtonTapped() {
-        
     }
     
 }
