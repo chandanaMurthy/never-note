@@ -9,76 +9,76 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Title-->
-        <scene sceneID="ttD-5U-BPR">
+        <!--Add Screen View Controller-->
+        <scene sceneID="SFX-mi-ZrA">
             <objects>
-                <viewController storyboardIdentifier="AddScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zxv-c3-tBf" customClass="AddScreenViewController" customModule="NeverNote" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Hfc-3v-iOR">
+                <viewController storyboardIdentifier="AddScreenViewController" id="Zmg-Q8-Kwe" customClass="AddScreenViewController" customModule="NeverNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Va9-Le-iVD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkN-DY-2zj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alb-FH-0Zz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exe-2F-zXu">
+                                        <rect key="frame" x="308" y="46.333333333333343" width="51" height="40"/>
+                                        <color key="backgroundColor" red="0.08956349641084671" green="0.45356523990631104" blue="0.67244535684585571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneButtonTapped:" destination="Zmg-Q8-Kwe" eventType="touchUpInside" id="oOF-fc-Zv5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bap-A3-ykq">
+                                        <rect key="frame" x="16" y="46.333333333333343" width="63" height="40"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="Zmg-Q8-Kwe" eventType="touchUpInside" id="0dV-BC-0m0"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="27.333333333333336" text="New Note" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oom-ZQ-bKr">
+                                        <rect key="frame" x="141.66666666666666" y="52.666666666666664" width="92" height="27.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.08956349641084671" green="0.45356523990631104" blue="0.67244535684585571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYQ-ty-zsB">
-                                <rect key="frame" x="0.0" y="30" width="375" height="44"/>
-                                <color key="barTintColor" red="0.08956349641084671" green="0.45356523990631104" blue="0.67244535684585571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Title" id="1wK-TL-7oi"/>
-                                </items>
-                            </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KaN-NM-fW2">
-                                <rect key="frame" x="0.0" y="74" width="375" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="HSr-oY-2HK"/>
-                                    <constraint firstAttribute="width" constant="375" id="lfE-rb-NnJ"/>
+                                    <constraint firstItem="bap-A3-ykq" firstAttribute="centerY" secondItem="Oom-ZQ-bKr" secondAttribute="centerY" id="0rj-yO-6DP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oom-ZQ-bKr" secondAttribute="bottom" constant="8" id="7hU-x2-zO4"/>
+                                    <constraint firstAttribute="height" constant="88" id="Jil-7Y-xPo"/>
+                                    <constraint firstItem="Oom-ZQ-bKr" firstAttribute="centerX" secondItem="alb-FH-0Zz" secondAttribute="centerX" id="gi3-Tc-6dd"/>
+                                    <constraint firstAttribute="trailing" secondItem="exe-2F-zXu" secondAttribute="trailing" constant="16" id="pP7-tq-yQA"/>
+                                    <constraint firstItem="exe-2F-zXu" firstAttribute="centerY" secondItem="Oom-ZQ-bKr" secondAttribute="centerY" id="rnm-MS-oSX"/>
+                                    <constraint firstItem="bap-A3-ykq" firstAttribute="leading" secondItem="alb-FH-0Zz" secondAttribute="leading" constant="16" id="tm9-hJ-DTd"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="x" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="RMK-w3-1d3">
-                                <rect key="frame" x="0.0" y="144" width="375" height="634"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KaN-NM-fW2" firstAttribute="leading" secondItem="6d0-lA-4qH" secondAttribute="leading" id="9Ls-Iz-ora"/>
-                            <constraint firstItem="6d0-lA-4qH" firstAttribute="bottom" secondItem="RMK-w3-1d3" secondAttribute="bottom" id="Bbr-xs-dXz"/>
-                            <constraint firstItem="DkN-DY-2zj" firstAttribute="top" secondItem="Hfc-3v-iOR" secondAttribute="top" id="CGN-w7-XhA"/>
-                            <constraint firstItem="RMK-w3-1d3" firstAttribute="top" secondItem="KaN-NM-fW2" secondAttribute="bottom" id="CWE-t9-tfQ"/>
-                            <constraint firstItem="IYQ-ty-zsB" firstAttribute="trailing" secondItem="KaN-NM-fW2" secondAttribute="trailing" id="Elk-s8-zPe"/>
-                            <constraint firstItem="IYQ-ty-zsB" firstAttribute="leading" secondItem="KaN-NM-fW2" secondAttribute="leading" id="Eu7-Nc-OJM"/>
-                            <constraint firstItem="IYQ-ty-zsB" firstAttribute="top" secondItem="DkN-DY-2zj" secondAttribute="bottom" id="FAO-Vk-gTH"/>
-                            <constraint firstItem="RMK-w3-1d3" firstAttribute="leading" secondItem="6d0-lA-4qH" secondAttribute="leading" id="MaO-KQ-8ny"/>
-                            <constraint firstItem="6d0-lA-4qH" firstAttribute="trailing" secondItem="RMK-w3-1d3" secondAttribute="trailing" id="Qd3-ST-7wl"/>
-                            <constraint firstItem="IYQ-ty-zsB" firstAttribute="top" secondItem="Hfc-3v-iOR" secondAttribute="top" constant="30" id="RDF-Ay-s6o"/>
-                            <constraint firstItem="KaN-NM-fW2" firstAttribute="trailing" secondItem="6d0-lA-4qH" secondAttribute="trailing" id="WXg-h4-88N"/>
-                            <constraint firstItem="IYQ-ty-zsB" firstAttribute="trailing" secondItem="DkN-DY-2zj" secondAttribute="trailing" id="WcJ-V2-gVa"/>
-                            <constraint firstItem="IYQ-ty-zsB" firstAttribute="leading" secondItem="DkN-DY-2zj" secondAttribute="leading" id="fzE-E6-Zmp"/>
-                            <constraint firstItem="IYQ-ty-zsB" firstAttribute="top" secondItem="DkN-DY-2zj" secondAttribute="bottom" id="mCQ-JD-xaT"/>
-                            <constraint firstItem="KaN-NM-fW2" firstAttribute="top" secondItem="IYQ-ty-zsB" secondAttribute="bottom" id="xfA-AF-TuV"/>
+                            <constraint firstItem="xoA-kh-Qob" firstAttribute="trailing" secondItem="alb-FH-0Zz" secondAttribute="trailing" id="Hbj-vR-DMS"/>
+                            <constraint firstItem="alb-FH-0Zz" firstAttribute="leading" secondItem="xoA-kh-Qob" secondAttribute="leading" id="fOg-gt-GO4"/>
+                            <constraint firstItem="alb-FH-0Zz" firstAttribute="top" secondItem="xoA-kh-Qob" secondAttribute="top" constant="-44" id="khv-BK-QeS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6d0-lA-4qH"/>
+                        <viewLayoutGuide key="safeArea" id="xoA-kh-Qob"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="TiG-2U-9jb"/>
-                    <connections>
-                        <outlet property="taskTextView" destination="RMK-w3-1d3" id="AaV-GH-kSl"/>
-                        <outlet property="titletextField" destination="KaN-NM-fW2" id="e3P-p3-Tor"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A8j-Bq-fGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T6Y-w9-kYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080.8" y="44.334975369458128"/>
+            <point key="canvasLocation" x="983.20000000000005" y="-14.039408866995075"/>
         </scene>
     </scenes>
 </document>
