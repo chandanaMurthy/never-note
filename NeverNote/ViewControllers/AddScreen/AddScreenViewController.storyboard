@@ -66,12 +66,34 @@
                                     <constraint firstItem="bap-A3-ykq" firstAttribute="leading" secondItem="alb-FH-0Zz" secondAttribute="leading" constant="16" id="tm9-hJ-DTd"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UBi-kd-TD6">
+                                <rect key="frame" x="0.0" y="88" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KsK-le-Tos"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Task" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="27s-VB-AwT">
+                                <rect key="frame" x="0.0" y="191" width="375" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="27s-VB-AwT" firstAttribute="leading" secondItem="xoA-kh-Qob" secondAttribute="leading" id="1dU-KH-w88"/>
                             <constraint firstItem="xoA-kh-Qob" firstAttribute="trailing" secondItem="alb-FH-0Zz" secondAttribute="trailing" id="Hbj-vR-DMS"/>
+                            <constraint firstItem="xoA-kh-Qob" firstAttribute="trailing" secondItem="UBi-kd-TD6" secondAttribute="trailing" id="MEc-T9-XwC"/>
+                            <constraint firstItem="UBi-kd-TD6" firstAttribute="leading" secondItem="xoA-kh-Qob" secondAttribute="leading" id="N2O-gN-MGh"/>
+                            <constraint firstItem="xoA-kh-Qob" firstAttribute="bottom" secondItem="27s-VB-AwT" secondAttribute="bottom" id="OTq-1W-yMF"/>
+                            <constraint firstItem="xoA-kh-Qob" firstAttribute="trailing" secondItem="27s-VB-AwT" secondAttribute="trailing" id="d9u-fi-XZn"/>
                             <constraint firstItem="alb-FH-0Zz" firstAttribute="leading" secondItem="xoA-kh-Qob" secondAttribute="leading" id="fOg-gt-GO4"/>
                             <constraint firstItem="alb-FH-0Zz" firstAttribute="top" secondItem="xoA-kh-Qob" secondAttribute="top" constant="-44" id="khv-BK-QeS"/>
+                            <constraint firstItem="27s-VB-AwT" firstAttribute="top" secondItem="UBi-kd-TD6" secondAttribute="bottom" constant="3" id="qMP-Va-SpG"/>
+                            <constraint firstItem="UBi-kd-TD6" firstAttribute="top" secondItem="alb-FH-0Zz" secondAttribute="bottom" id="wtZ-3W-6Du"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xoA-kh-Qob"/>
                     </view>
