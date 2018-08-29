@@ -35,8 +35,6 @@
 		486950AC21303D1800DED227 /* CompletedTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486950AB21303D1800DED227 /* CompletedTasksViewController.swift */; };
 		486BF2762134329700363775 /* NotesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BF2752134329700363775 /* NotesNavigationController.swift */; };
 		486BF2782134350A00363775 /* NotesNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486BF2772134350A00363775 /* NotesNavigationController.storyboard */; };
-		486BF27C2135332F00363775 /* AddScreenNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BF27B2135332F00363775 /* AddScreenNavigationController.swift */; };
-		486BF27E213544B400363775 /* AddScreenNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486BF27D213544B400363775 /* AddScreenNavigationController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +89,6 @@
 		486950AB21303D1800DED227 /* CompletedTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksViewController.swift; sourceTree = "<group>"; };
 		486BF2752134329700363775 /* NotesNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesNavigationController.swift; sourceTree = "<group>"; };
 		486BF2772134350A00363775 /* NotesNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotesNavigationController.storyboard; sourceTree = "<group>"; };
-		486BF27B2135332F00363775 /* AddScreenNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenNavigationController.swift; sourceTree = "<group>"; };
-		486BF27D213544B400363775 /* AddScreenNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddScreenNavigationController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,8 +291,6 @@
 			children = (
 				48695096212FFFD800DED227 /* AddScreenViewController.swift */,
 				48695094212FFF2A00DED227 /* AddScreenViewController.storyboard */,
-				486BF27B2135332F00363775 /* AddScreenNavigationController.swift */,
-				486BF27D213544B400363775 /* AddScreenNavigationController.storyboard */,
 			);
 			path = AddScreen;
 			sourceTree = "<group>";
@@ -459,7 +453,6 @@
 				48695095212FFF2A00DED227 /* AddScreenViewController.storyboard in Resources */,
 				486950AA21303D0500DED227 /* CompletedTasksViewController.storyboard in Resources */,
 				17EDBDB021314D92002B17F5 /* TrashViewController.storyboard in Resources */,
-				486BF27E213544B400363775 /* AddScreenNavigationController.storyboard in Resources */,
 				17E9EDC9212FD9E7007D56CB /* LaunchScreen.storyboard in Resources */,
 				486950A821303CEB00DED227 /* NotesViewController.storyboard in Resources */,
 				17F62376213517A200085518 /* TrashNavigationController.storyboard in Resources */,
@@ -495,7 +488,6 @@
 				17F623722135176000085518 /* SettingsNavigationController.swift in Sources */,
 				486BF2762134329700363775 /* NotesNavigationController.swift in Sources */,
 				48695097212FFFD800DED227 /* AddScreenViewController.swift in Sources */,
-				486BF27C2135332F00363775 /* AddScreenNavigationController.swift in Sources */,
 				17EDBDB921314EFE002B17F5 /* SettingsViewController.swift in Sources */,
 				17EDBDB421314E33002B17F5 /* TrashViewController.swift in Sources */,
 				1758ED3C21303D0A00618E51 /* Constants.swift in Sources */,
