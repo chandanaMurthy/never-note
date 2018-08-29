@@ -23,14 +23,7 @@ class NotesViewController: UIViewController {
         configureNavigationBar()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        //self.navigationController?.navigationBar.backItem?.title = "Back"
-    }
-    
     @objc func didTapRightBarButton(_ sender: Any?) {
-        //self.navigationController?.pushViewController(UIViewController.addScreen, animated: true)
-        
         self.present(UIViewController.addScreen, animated: true, completion: nil)
     }
     

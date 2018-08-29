@@ -13,6 +13,7 @@ class CompletedNavigationController : UINavigationController {
     let completedViewController = UIViewController.completed
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.viewControllers = [completedViewController]
     }
 }
