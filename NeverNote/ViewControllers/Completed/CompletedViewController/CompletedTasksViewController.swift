@@ -17,7 +17,7 @@ class CompletedTasksViewController: UIViewController {
         completedTasks.append("Hello")
         completedTasks.append("Hello")
         completedTasks.append("Hello")
-        let indexPath = IndexPath(row: completedTasks.count-1, section: 0)
+        let indexPath = IndexPath(row: completedTasks.count - 1, section: 0)
         self.completedTasksTableView.insertRows(at: [indexPath], with: .top)
     }
     
@@ -45,6 +45,17 @@ extension CompletedTasksViewController : UITableViewDelegate,UITableViewDataSour
         cell.textLabel?.text = completedTasks[indexPath.row]
         cell.textLabel?.numberOfLines = 0
         cell.selectionStyle = .none
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            self.completedTasksTableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
     
 }
