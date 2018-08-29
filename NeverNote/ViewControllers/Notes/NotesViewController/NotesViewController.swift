@@ -14,21 +14,22 @@ class NotesViewController: UIViewController {
     let BACK_BUTTON_TITLE = "Back"
     let CELL_IDENTIFIER = "cellIdentifier"
     
-    var taskData : [String] = ["aaaa", "aabb"]
+    var tasks = [Task]()
+
+    
     
     @IBOutlet weak var notesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavigationBar()
-        self.notesTableView.dataSource = self
-        self.notesTableView.delegate = self
-        self.notesTableView.register(UITableViewCell.self, forCellReuseIdentifier: CELL_IDENTIFIER)
-        self.notesTableView.reloadData()
+        self.configureNavigationBar()
+        self.setupTableView()
     }
     
     @objc func didTapRightBarButton(_ sender: Any?) {
-        self.present(UIViewController.addScreen, animated: true, completion: nil)
+        let addScreenViewController = UIViewController.addScreen
+        addScreenViewController.delegate = self
+        self.present(addScreenViewController, animated: true, completion: nil)
     }
     
     func configureNavigationBar() {
@@ -44,13 +45,29 @@ class NotesViewController: UIViewController {
 
 extension NotesViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return taskData.count
+        return tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         let cell = notesTableView.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER, for: indexPath)
-        cell.textLabel?.text = taskData[indexPath.row]
+        cell.textLabel?.text = tasks[indexPath.row].taskTitle
         return cell
     }
     
+    func setupTableView() {
+        self.notesTableView.dataSource = self
+        self.notesTableView.delegate = self
+        self.notesTableView.register(UITableViewCell.self, forCellReuseIdentifier: CELL_IDENTIFIER)
+        self.notesTableView.reloadData()
+    }
+    
+}
+
+extension NotesViewController : AddScreenViewControllerDelegate {
+    func addScreenViewController(addScreenViewController: AddScreenViewController, didCreate task: Task) {
+        self.tasks.append(task)
+    }
+
 }
