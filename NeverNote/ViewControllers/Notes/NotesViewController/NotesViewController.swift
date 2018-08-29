@@ -14,13 +14,17 @@ class NotesViewController: UIViewController {
     let BACK_BUTTON_TITLE = "Back"
     let CELL_IDENTIFIER = "cellIdentifier"
     
-    var taskData: [String]!
+    var taskData : [String] = ["aaaa", "aabb"]
     
     @IBOutlet weak var notesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
+        self.notesTableView.dataSource = self
+        self.notesTableView.delegate = self
+        self.notesTableView.register(UITableViewCell.self, forCellReuseIdentifier: CELL_IDENTIFIER)
+        self.notesTableView.reloadData()
     }
     
     @objc func didTapRightBarButton(_ sender: Any?) {
@@ -48,6 +52,5 @@ extension NotesViewController : UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = taskData[indexPath.row]
         return cell
     }
-    
     
 }
