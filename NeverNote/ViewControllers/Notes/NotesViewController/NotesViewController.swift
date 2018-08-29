@@ -14,7 +14,7 @@ class NotesViewController: UIViewController {
     let BACK_BUTTON_TITLE = "Back"
     let CELL_IDENTIFIER = "cellIdentifier"
     
-    var taskData: [String]!
+    var taskData = [String]()
     
     @IBOutlet weak var notesTableView: UITableView!
     
