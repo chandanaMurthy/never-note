@@ -13,6 +13,7 @@ class NotesViewController: UIViewController {
     let NAVIGATION_BAR_TITLE = "Notes"
     let BACK_BUTTON_TITLE = "Back"
     let CELL_IDENTIFIER = "cellIdentifier"
+    let COMPLETED_ACTION_TITLE = "Mark Done"
     
     var tasks = [Task]()
 
@@ -60,7 +61,28 @@ extension NotesViewController : UITableViewDataSource, UITableViewDelegate {
         self.notesTableView.dataSource = self
         self.notesTableView.delegate = self
         self.notesTableView.register(UITableViewCell.self, forCellReuseIdentifier: CELL_IDENTIFIER)
+        
+        tasks.append(Task(taskTitle: "A", taskDetails: "A"))
+        tasks.append(Task(taskTitle: "B", taskDetails: "B"))
+        
         self.notesTableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tasks.remove(at: indexPath.row)
+            notesTableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        
+        let completedAction = UIContextualAction(style: .normal, title: COMPLETED_ACTION_TITLE) { (action, view, success) in
+            success(true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [completedAction])
     }
     
 }
@@ -68,6 +90,7 @@ extension NotesViewController : UITableViewDataSource, UITableViewDelegate {
 extension NotesViewController : AddScreenViewControllerDelegate {
     func addScreenViewController(addScreenViewController: AddScreenViewController, didCreate task: Task) {
         self.tasks.append(task)
+        self.notesTableView.reloadData()
     }
 
 }
