@@ -93,7 +93,7 @@
                     </view>
                     <connections>
                         <outlet property="taskTextView" destination="27s-VB-AwT" id="Kbk-Te-wlN"/>
-                        <outlet property="titletextField" destination="UBi-kd-TD6" id="Cmb-Fg-zAx"/>
+                        <outlet property="titleTextField" destination="UBi-kd-TD6" id="Cmb-Fg-zAx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6Y-w9-kYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
