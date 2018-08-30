@@ -30,6 +30,7 @@ class HomeTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
+        assignDelegates()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -41,5 +42,25 @@ class HomeTabBarController: UITabBarController {
         self.viewControllers = [notesNavigationController, completedNavigationController, trashNavigationController, settingsNavigationController]
     }
     
+    func assignDelegates() {
+        self.notesNavigationController.notesViewController.delegate = self
+    }
+    
+}
+
+extension HomeTabBarController: NotesViewControllerDelegate {
+    func notesViewController(notesViewController: NotesViewController, didCompleteTask task: Task) {
+        let completed = self.completedNavigationController.completedViewController
+        completed.completedTasks.append(task)
+        completed.completedTasksChanged = true
+        
+        let indexPath = IndexPath(row: completed.completedTasks.count - 1, section: 0)
+        completed.indexPathArray.append(indexPath)
+        //print(completed.indexPathArray)
+    }
+    
+    func notesViewController(notesViewController: NotesViewController, didDeleteTask task: Task) {
+        
+    }
 }
 

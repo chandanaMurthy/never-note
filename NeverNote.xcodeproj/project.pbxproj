@@ -322,8 +322,8 @@
 		486950A421303BD500DED227 /* Completed */ = {
 			isa = PBXGroup;
 			children = (
-				17F62370213515A500085518 /* CompletedNavigationController */,
 				17F6236E2135157000085518 /* CompletedViewController */,
+				17F62370213515A500085518 /* CompletedNavigationController */,
 			);
 			path = Completed;
 			sourceTree = "<group>";

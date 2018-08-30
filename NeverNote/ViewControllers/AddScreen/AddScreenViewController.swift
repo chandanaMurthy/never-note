@@ -11,13 +11,9 @@ class AddScreenViewController: UIViewController {
     
     @IBAction func doneButtonTapped(_ sender: Any) {
         let task = Task(taskTitle: titleTextField.text!, taskDetails: taskTextView.text)
-        //let task2 = Task(taskTitle: "", taskDetails:"")
         delegate?.addScreenViewController(addScreenViewController: self, didCreate:task)
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

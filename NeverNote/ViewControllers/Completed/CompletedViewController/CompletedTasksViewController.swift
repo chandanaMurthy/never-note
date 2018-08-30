@@ -4,7 +4,10 @@ import UIKit
 
 class CompletedTasksViewController: UIViewController {
     @IBOutlet weak var completedTasksTableView: UITableView!
-    var completedTasks = [String]()
+    
+    var completedTasks = [Task]()
+    var completedTasksChanged = false
+    var indexPathArray = [IndexPath]()
     
     
     func setupTableView() {
@@ -14,9 +17,6 @@ class CompletedTasksViewController: UIViewController {
     }
     
     func addToCompletedTableView() {
-        completedTasks.append("Hello")
-        completedTasks.append("Hello")
-        completedTasks.append("Hello")
         let indexPath = IndexPath(row: completedTasks.count - 1, section: 0)
         self.completedTasksTableView.insertRows(at: [indexPath], with: .top)
     }
@@ -27,6 +27,21 @@ class CompletedTasksViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         setupTableView()
         addToCompletedTableView()
+        self.completedTasksTableView.reloadData()
+        self.completedTasksChanged = false
+        self.indexPathArray.removeAll()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //print("ViewWillAppear")
+        if self.completedTasksChanged {
+            //print("ViewWillAppear IF")
+            self.completedTasksTableView.insertRows(at: indexPathArray, with: .automatic)
+            self.completedTasksChanged = false
+            self.indexPathArray.removeAll()
+        }
+        
     }
 }
 
@@ -42,7 +57,7 @@ extension CompletedTasksViewController : UITableViewDelegate,UITableViewDataSour
     }
     
     func configureCell(cell : UITableViewCell, indexPath : IndexPath) {
-        cell.textLabel?.text = completedTasks[indexPath.row]
+        cell.textLabel?.text = completedTasks[indexPath.row].taskTitle
         cell.textLabel?.numberOfLines = 0
         cell.selectionStyle = .none
     }
