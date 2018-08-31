@@ -1,0 +1,78 @@
+//
+//  ViewController.swift
+//  NeverNote
+//
+//  Created by Chandana on 8/24/18.
+//  Copyright © 2018 Chandana. All rights reserved.
+//
+
+import UIKit
+
+class HomeTabBarController: UITabBarController {
+<<<<<<< HEAD
+    let notesNavigationController = UIViewController.notesNavigationController
+    let completedNavigationController = UIViewController.completedNavigationController
+    let trashNavigationController = UIViewController.trashNavigationController
+    let settingsNavigationController = UIViewController.settingsNavigationController
+=======
+    private let notesNavigationController = UIViewController.notesNavigationController
+    private let completedNavigationController = UIViewController.completedNavigationController
+    private let trashNavigationController = UIViewController.trashNavigationController
+    private let settingsNavigationController = UIViewController.settingsNavigationController
+    
+    private let addScreen = UIViewController.addScreen
+>>>>>>> 94509e4bef9724254e9f93266269bb1379f8cf3e
+    
+    override var selectedViewController: UIViewController? {
+        didSet {
+            print("tabitem \(selectedIndex) was selected")
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupTabBar()
+<<<<<<< HEAD
+        completedNavigationController.completedDelegate = self
+=======
+        assignDelegates()
+        // Do any additional setup after loading the view, typically from a nib.
+>>>>>>> 94509e4bef9724254e9f93266269bb1379f8cf3e
+    }
+    
+    private func setupTabBar() {
+        notesNavigationController.tabBarItem = UITabBarItem(title: Constants.NOTES, image: #imageLiteral(resourceName: "Notes").withRenderingMode(.alwaysTemplate), tag: 10)
+        completedNavigationController.tabBarItem = UITabBarItem(title: Constants.COMPLETED, image: #imageLiteral(resourceName: "Done").withRenderingMode(.alwaysTemplate), tag: 12)
+        trashNavigationController.tabBarItem = UITabBarItem(title: Constants.TRASH, image: #imageLiteral(resourceName: "Trash").withRenderingMode(.alwaysTemplate), tag: 14)
+        settingsNavigationController.tabBarItem = UITabBarItem(title: Constants.SETTINGS, image: #imageLiteral(resourceName: "Settings").withRenderingMode(.alwaysTemplate), tag: 16)
+        
+        self.viewControllers = [notesNavigationController, completedNavigationController, trashNavigationController, settingsNavigationController]
+    }
+}
+
+extension HomeTabBarController : CompletedNavigationControllerDelegate {
+    func completedNavigationController(completedNavigationController: CompletedNavigationController, didDelete task: Task) {
+        trashNavigationController.append(task: task)
+    }
+    
+<<<<<<< HEAD
+    func completedNavigationController(completedNavigationController: CompletedNavigationController, didMarkUndone task: Task) {
+        notesNavigationController.appendToNotes(task: task)
+=======
+    private func assignDelegates() {
+        self.notesNavigationController.notesNavDelegate = self
+    }
+    
+}
+
+extension HomeTabBarController: NotesNavigationControllerDelegate {
+    func notesNavigationController(notesNavigationController: NotesNavigationController, didCompleteTask task: Task) {
+        completedNavigationController.insert(task: task)
+    }
+    
+    func notesNavigationController(notesNavigationController: NotesNavigationController, didDeleteTask task: Task) {
+        
+>>>>>>> 94509e4bef9724254e9f93266269bb1379f8cf3e
+    }
+}
+
