@@ -10,10 +10,18 @@ import Foundation
 import UIKit
 
 class CompletedNavigationController : UINavigationController {
-    let completedViewController = UIViewController.completed
+    private let completedViewController = UIViewController.completed
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewControllers = [completedViewController]
     }
 }
+
+extension CompletedNavigationController {
+    func insert(task: Task) {
+        completedViewController.insert(task: task)
+    }
+}
+

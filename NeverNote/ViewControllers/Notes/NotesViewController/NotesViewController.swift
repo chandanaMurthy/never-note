@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 class NotesViewController: UIViewController {
-    let NAVIGATION_BAR_TITLE = "Notes"
-    let BACK_BUTTON_TITLE = "Back"
-    let CELL_IDENTIFIER = "cellIdentifier"
-    let COMPLETED_ACTION_TITLE = "Mark Done"
+    private let NAVIGATION_BAR_TITLE = "Notes"
+    private let BACK_BUTTON_TITLE = "Back"
+    private let CELL_IDENTIFIER = "cellIdentifier"
+    private let COMPLETED_ACTION_TITLE = "Mark Done"
     
-    var tasks = [Task]()
+    private var tasks = [Task]()
 
     weak var delegate: NotesViewControllerDelegate?
     
@@ -34,7 +34,7 @@ class NotesViewController: UIViewController {
         self.present(addScreenViewController, animated: true, completion: nil)
     }
     
-    func configureNavigationBar() {
+    private func configureNavigationBar() {
         self.navigationItem.title = NAVIGATION_BAR_TITLE
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         let rightNavBarButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(didTapRightBarButton))
@@ -58,7 +58,7 @@ extension NotesViewController : UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         self.notesTableView.dataSource = self
         self.notesTableView.delegate = self
         self.notesTableView.register(UITableViewCell.self, forCellReuseIdentifier: CELL_IDENTIFIER)
