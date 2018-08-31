@@ -19,16 +19,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U0V-ED-laE">
-                                <rect key="frame" x="16" y="44" width="343" height="734"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7ur-2Z-TIf" firstAttribute="bottom" secondItem="U0V-ED-laE" secondAttribute="bottom" id="RaR-KD-K2A"/>
-                            <constraint firstItem="7ur-2Z-TIf" firstAttribute="trailing" secondItem="U0V-ED-laE" secondAttribute="trailing" constant="16" id="T9S-B7-Z3t"/>
+                            <constraint firstItem="7ur-2Z-TIf" firstAttribute="trailing" secondItem="U0V-ED-laE" secondAttribute="trailing" id="T9S-B7-Z3t"/>
                             <constraint firstItem="U0V-ED-laE" firstAttribute="top" secondItem="7ur-2Z-TIf" secondAttribute="top" id="eQ8-ie-gz9"/>
-                            <constraint firstItem="U0V-ED-laE" firstAttribute="leading" secondItem="7ur-2Z-TIf" secondAttribute="leading" constant="16" id="w1h-fC-5x7"/>
+                            <constraint firstItem="U0V-ED-laE" firstAttribute="leading" secondItem="7ur-2Z-TIf" secondAttribute="leading" id="w1h-fC-5x7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7ur-2Z-TIf"/>
                     </view>

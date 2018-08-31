@@ -10,10 +10,14 @@ import Foundation
 import UIKit
 
 class TrashNavigationController : UINavigationController {
-    let trashViewController = UIViewController.trash
+    private let trashViewController = UIViewController.trash
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewControllers = [trashViewController]
+    }
+    
+    func append(task : Task) {
+        trashViewController.append(task: task)
     }
 }

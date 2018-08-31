@@ -9,28 +9,21 @@
 import UIKit
 
 class HomeTabBarController: UITabBarController {
-    let notes = UIViewController.notes
-    let completed = UIViewController.completed
-    let trash = UIViewController.trash
-    let settings = UIViewController.settings
-    
     let notesNavigationController = UIViewController.notesNavigationController
     let completedNavigationController = UIViewController.completedNavigationController
     let trashNavigationController = UIViewController.trashNavigationController
     let settingsNavigationController = UIViewController.settingsNavigationController
     
-    let addScreen = UIViewController.addScreen
-    
     override var selectedViewController: UIViewController? {
         didSet {
-            print("VC \(selectedIndex)")
+            print("tabitem \(selectedIndex) was selected")
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
-        // Do any additional setup after loading the view, typically from a nib.
+        completedNavigationController.completedDelegate = self
     }
     
     func setupTabBar() {
@@ -40,6 +33,15 @@ class HomeTabBarController: UITabBarController {
         settingsNavigationController.tabBarItem = UITabBarItem(title: Constants.SETTINGS, image: #imageLiteral(resourceName: "Settings").withRenderingMode(.alwaysTemplate), tag: 16)
         self.viewControllers = [notesNavigationController, completedNavigationController, trashNavigationController, settingsNavigationController]
     }
+}
+
+extension HomeTabBarController : CompletedNavigationControllerDelegate {
+    func completedNavigationController(completedNavigationController: CompletedNavigationController, didDelete task: Task) {
+        trashNavigationController.append(task: task)
+    }
     
+    func completedNavigationController(completedNavigationController: CompletedNavigationController, didMarkUndone task: Task) {
+        notesNavigationController.appendToNotes(task: task)
+    }
 }
 

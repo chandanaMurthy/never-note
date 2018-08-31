@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8wu-jG-bqy">
-                                <rect key="frame" x="16" y="44" width="343" height="734"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vx0-CQ-DOY" firstAttribute="trailing" secondItem="8wu-jG-bqy" secondAttribute="trailing" constant="16" id="9zo-mv-VNm"/>
+                            <constraint firstItem="vx0-CQ-DOY" firstAttribute="trailing" secondItem="8wu-jG-bqy" secondAttribute="trailing" id="9zo-mv-VNm"/>
                             <constraint firstItem="8wu-jG-bqy" firstAttribute="top" secondItem="vx0-CQ-DOY" secondAttribute="top" id="KIR-Xa-qpU"/>
-                            <constraint firstItem="8wu-jG-bqy" firstAttribute="leading" secondItem="vx0-CQ-DOY" secondAttribute="leading" constant="16" id="Odj-FR-8et"/>
+                            <constraint firstItem="8wu-jG-bqy" firstAttribute="leading" secondItem="vx0-CQ-DOY" secondAttribute="leading" id="Odj-FR-8et"/>
                             <constraint firstItem="vx0-CQ-DOY" firstAttribute="bottom" secondItem="8wu-jG-bqy" secondAttribute="bottom" id="Vgy-BW-hqU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vx0-CQ-DOY"/>

@@ -17,5 +17,6 @@ class Constants {
     static let SETTINGS = "Settings"
     static let ADD_SCREEN = "Add New Note"
     static let REUSE_IDENTIFIER = "Reuse Identifier"
+    static let MARK_AS_UNDONE = "Mark as Undone"
 
 }

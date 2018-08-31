@@ -3,8 +3,9 @@ import Foundation
 import UIKit
 
 class TrashViewController : UIViewController {
-    @IBOutlet weak var trashTableView: UITableView!
-    var deletedTasks = [String]()
+    @IBOutlet private weak var trashTableView: UITableView!
+    private var deletedTasks = [Task]()
+    var indexPathArray = [IndexPath]()
     
     func setupTableView() {
         trashTableView.delegate = self
@@ -13,19 +14,35 @@ class TrashViewController : UIViewController {
     }
     
     func addIntoTableView() {
-        deletedTasks.append("Deleted Task 1")
-        deletedTasks.append("Deleted Task 2")
         let indexPath = IndexPath(row: deletedTasks.count - 1, section: 0)
-        self.trashTableView.insertRows(at: [indexPath], with: .top)
+        self.trashTableView.insertRows(at: [indexPath], with: .automatic)
+    }
+    
+    func setupNavigationBar() {
+        self.navigationItem.title = Constants.TRASH
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = Constants.TRASH
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        setupNavigationBar()
         setupTableView()
         addIntoTableView()
+        print("loaded")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        trashTableView.insertRows(at: indexPathArray, with: .top)
+        indexPathArray.removeAll()
+    }
+    
+    func append(task : Task) {
+        self.deletedTasks.append(task)
+        let indexPath = IndexPath(row: self.deletedTasks.count - 1, section: 0)
+        self.indexPathArray.append(indexPath)
+    }
+    
 }
 
 extension TrashViewController : UITableViewDataSource, UITableViewDelegate {
@@ -40,7 +57,7 @@ extension TrashViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func configureCell(cell : UITableViewCell, indexPath : IndexPath) {
-        cell.textLabel?.text = deletedTasks[indexPath.row]
+        cell.textLabel?.text = deletedTasks[indexPath.row].taskTitle
         cell.textLabel?.numberOfLines = 0
         cell.selectionStyle = .none
     }

@@ -16,9 +16,7 @@ class NotesViewController: UIViewController {
     let COMPLETED_ACTION_TITLE = "Mark Done"
     
     var tasks = [Task]()
-
-    
-    
+    var notesIndexPathArray = [IndexPath]()
     @IBOutlet weak var notesTableView: UITableView!
     
     override func viewDidLoad() {
@@ -42,6 +40,18 @@ class NotesViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: BACK_BUTTON_TITLE, style: UIBarButtonItemStyle.plain, target: nil, action: nil)
     }
+    
+    func appendToNotes(task: Task) {
+        self.tasks.append(task)
+        let indexPath = IndexPath(row: self.tasks.count - 1, section: 0)
+        notesIndexPathArray.append(indexPath)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        notesTableView.insertRows(at: notesIndexPathArray, with: .automatic)
+        notesIndexPathArray.removeAll()
+    }
 }
 
 extension NotesViewController : UITableViewDataSource, UITableViewDelegate {
@@ -50,8 +60,6 @@ extension NotesViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
         let cell = notesTableView.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER, for: indexPath)
         cell.textLabel?.text = tasks[indexPath.row].taskTitle
         return cell
@@ -64,7 +72,6 @@ extension NotesViewController : UITableViewDataSource, UITableViewDelegate {
         
         tasks.append(Task(taskTitle: "A", taskDetails: "A"))
         tasks.append(Task(taskTitle: "B", taskDetails: "B"))
-        
         self.notesTableView.reloadData()
     }
     
@@ -76,15 +83,11 @@ extension NotesViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
-        
         let completedAction = UIContextualAction(style: .normal, title: COMPLETED_ACTION_TITLE) { (action, view, success) in
             success(true)
         }
-        
         return UISwipeActionsConfiguration(actions: [completedAction])
     }
-    
 }
 
 extension NotesViewController : AddScreenViewControllerDelegate {
@@ -92,5 +95,4 @@ extension NotesViewController : AddScreenViewControllerDelegate {
         self.tasks.append(task)
         self.notesTableView.reloadData()
     }
-
 }

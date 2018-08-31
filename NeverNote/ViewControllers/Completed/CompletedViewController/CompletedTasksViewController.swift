@@ -4,7 +4,8 @@ import UIKit
 
 class CompletedTasksViewController: UIViewController {
     @IBOutlet weak var completedTasksTableView: UITableView!
-    var completedTasks = [String]()
+    weak var delegate : CompletedTasksViewControllerDelegate?
+    var completedTasks = [Task]()
     
     
     func setupTableView() {
@@ -14,17 +15,22 @@ class CompletedTasksViewController: UIViewController {
     }
     
     func addToCompletedTableView() {
-        completedTasks.append("Hello")
-        completedTasks.append("Hello")
-        completedTasks.append("Hello")
+        completedTasks.append(Task(taskTitle: "Completed1", taskDetails: "Completed once"))
+        completedTasks.append(Task(taskTitle: "Completed2", taskDetails: "Completed twice"))
+        completedTasks.append(Task(taskTitle: "Completed3", taskDetails: "Completed once"))
+        completedTasks.append(Task(taskTitle: "Completed4", taskDetails: "Completed once"))
         let indexPath = IndexPath(row: completedTasks.count - 1, section: 0)
         self.completedTasksTableView.insertRows(at: [indexPath], with: .top)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func setupNavigationBar() {
         self.navigationItem.title = Constants.COMPLETED
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupNavigationBar()
         setupTableView()
         addToCompletedTableView()
     }
@@ -42,7 +48,7 @@ extension CompletedTasksViewController : UITableViewDelegate,UITableViewDataSour
     }
     
     func configureCell(cell : UITableViewCell, indexPath : IndexPath) {
-        cell.textLabel?.text = completedTasks[indexPath.row]
+        cell.textLabel?.text = completedTasks[indexPath.row].taskTitle
         cell.textLabel?.numberOfLines = 0
         cell.selectionStyle = .none
     }
@@ -51,11 +57,33 @@ extension CompletedTasksViewController : UITableViewDelegate,UITableViewDataSour
         return true
     }
     
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let undone = UIContextualAction(style: .normal, title: Constants.MARK_AS_UNDONE) { [weak self](ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            guard let weakSelf = self else {
+                return
+            }
+            weakSelf.delegate?.completedTasksViewController(completedTaskViewController: weakSelf, didMarkUndone: weakSelf.completedTasks[indexPath.row])
+            self?.completedTasks.remove(at: indexPath.row)
+            self?.completedTasksTableView.deleteRows(at: [indexPath], with: .fade)
+            success(true)
+        }
+        return UISwipeActionsConfiguration(actions: [undone])
+    }
+
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
+            delegate?.completedTasksViewController(completedTaskViewController: self, didDelete: completedTasks[indexPath.row])
+            completedTasks.remove(at: indexPath.row)
             self.completedTasksTableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-    
 }
+
+protocol CompletedTasksViewControllerDelegate : class {
+    func completedTasksViewController(completedTaskViewController: CompletedTasksViewController, didDelete task: Task)
+    
+    func completedTasksViewController(completedTaskViewController: CompletedTasksViewController, didMarkUndone task: Task)
+}
+
+
