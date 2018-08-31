@@ -5,17 +5,14 @@ import UIKit
 class TrashViewController : UIViewController {
     @IBOutlet private weak var trashTableView: UITableView!
     private var deletedTasks = [Task]()
-    var indexPathArray = [IndexPath]()
+    var toInsertTasks = [Task]()
+    
+    var deletedTasksChanged = false
     
     func setupTableView() {
         trashTableView.delegate = self
         trashTableView.dataSource = self
         trashTableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.REUSE_IDENTIFIER)
-    }
-    
-    func addIntoTableView() {
-        let indexPath = IndexPath(row: deletedTasks.count - 1, section: 0)
-        self.trashTableView.insertRows(at: [indexPath], with: .automatic)
     }
     
     func setupNavigationBar() {
@@ -27,20 +24,34 @@ class TrashViewController : UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         setupTableView()
-        addIntoTableView()
-        print("loaded")
+        insertNewTasks(tasks: toInsertTasks)
+        print("Trash ViewDidLoad!")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        trashTableView.insertRows(at: indexPathArray, with: .top)
-        indexPathArray.removeAll()
+        self.insertNewTasks(tasks: self.toInsertTasks)
+       
     }
     
+    func insertNewTasks(tasks : [Task]) {
+        let indexPaths = generateIndexPaths(from: tasks)
+        self.trashTableView.insertRows(at: indexPaths, with: .automatic)
+        self.toInsertTasks.removeAll()
+    }
+    
+    
+    func generateIndexPaths(from : [Task]) -> [IndexPath] {
+        return toInsertTasks.map { (task) -> IndexPath in
+            self.deletedTasks.append(task)
+            return IndexPath(row:self.deletedTasks.count - 1, section: 0)
+        }
+    }
+    
+    
+    
     func append(task : Task) {
-        self.deletedTasks.append(task)
-        let indexPath = IndexPath(row: self.deletedTasks.count - 1, section: 0)
-        self.indexPathArray.append(indexPath)
+        self.toInsertTasks.append(task)
     }
     
 }
@@ -60,5 +71,11 @@ extension TrashViewController : UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = deletedTasks[indexPath.row].taskTitle
         cell.textLabel?.numberOfLines = 0
         cell.selectionStyle = .none
+    }
+}
+
+extension TrashViewController {
+    func insert(task: Task) {
+        self.toInsertTasks.append(task)
     }
 }

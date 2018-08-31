@@ -105,6 +105,7 @@ protocol CompletedTasksViewControllerDelegate : class {
 }
 
 extension CompletedTasksViewController {
+    //Inserts a task from Notes to Completed
     func insert(task: Task) {
         self.completedTasks.append(task)
         let indexPath = IndexPath(row: completedTasks.count - 1, section: 0)

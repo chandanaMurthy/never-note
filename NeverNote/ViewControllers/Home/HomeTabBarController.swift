@@ -18,7 +18,7 @@ class HomeTabBarController: UITabBarController {
     
     override var selectedViewController: UIViewController? {
         didSet {
-            print("tabitem \(selectedIndex) was selected")
+            //print("tabitem \(selectedIndex) was selected")
         }
     }
     
@@ -62,7 +62,7 @@ extension HomeTabBarController: NotesNavigationControllerDelegate {
     }
     
     func notesNavigationController(notesNavigationController: NotesNavigationController, didDeleteTask task: Task) {
-        
+        trashNavigationController.insert(task: task)
     }
 }
 

@@ -21,3 +21,10 @@ class TrashNavigationController : UINavigationController {
         trashViewController.append(task: task)
     }
 }
+
+extension TrashNavigationController {
+    //Insert a task from Notes to Trash
+    func insert(task: Task) {
+        self.trashViewController.insert(task: task)
+    }
+}

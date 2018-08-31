@@ -35,6 +35,7 @@ extension CompletedNavigationController : CompletedTasksViewControllerDelegate {
 }
 
 extension CompletedNavigationController {
+    //Inserts a task from Notes To Completed
     func insert(task: Task) {
         completedViewController.insert(task: task)
     }
