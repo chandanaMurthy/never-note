@@ -5,11 +5,9 @@ import UIKit
 class CompletedTasksViewController: UIViewController {
     @IBOutlet weak var completedTasksTableView: UITableView!
     weak var delegate : CompletedTasksViewControllerDelegate?
-    
     private var completedTasks = [Task]()
     private var completedTasksChanged = false
     private var indexPathArray = [IndexPath]()
-    
     
     private func setupTableView() {
         completedTasksTableView.delegate = self
@@ -98,12 +96,6 @@ extension CompletedTasksViewController : UITableViewDelegate,UITableViewDataSour
     }
 }
 
-protocol CompletedTasksViewControllerDelegate : class {
-    func completedTasksViewController(completedTaskViewController: CompletedTasksViewController, didDelete task: Task)
-    
-    func completedTasksViewController(completedTaskViewController: CompletedTasksViewController, didMarkUndone task: Task)
-}
-
 extension CompletedTasksViewController {
     func insert(task: Task) {
         self.completedTasks.append(task)
@@ -112,3 +104,10 @@ extension CompletedTasksViewController {
         self.completedTasksChanged = true
     }
 }
+
+protocol CompletedTasksViewControllerDelegate : class {
+    func completedTasksViewController(completedTaskViewController: CompletedTasksViewController, didDelete task: Task)
+    
+    func completedTasksViewController(completedTaskViewController: CompletedTasksViewController, didMarkUndone task: Task)
+}
+

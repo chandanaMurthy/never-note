@@ -4,21 +4,17 @@ import UIKit
 
 class TrashViewController : UIViewController {
     @IBOutlet private weak var trashTableView: UITableView!
+    weak var delegate: TrashViewControllerDelegate?
     private var deletedTasks = [Task]()
     var indexPathArray = [IndexPath]()
     
-    func setupTableView() {
+    private func setupTableView() {
         trashTableView.delegate = self
         trashTableView.dataSource = self
         trashTableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.REUSE_IDENTIFIER)
     }
     
-    func addIntoTableView() {
-        let indexPath = IndexPath(row: deletedTasks.count - 1, section: 0)
-        self.trashTableView.insertRows(at: [indexPath], with: .automatic)
-    }
-    
-    func setupNavigationBar() {
+    private func setupNavigationBar() {
         self.navigationItem.title = Constants.TRASH
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
     }
@@ -27,7 +23,6 @@ class TrashViewController : UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         setupTableView()
-        addIntoTableView()
         print("loaded")
     }
     
@@ -42,7 +37,6 @@ class TrashViewController : UIViewController {
         let indexPath = IndexPath(row: self.deletedTasks.count - 1, section: 0)
         self.indexPathArray.append(indexPath)
     }
-    
 }
 
 extension TrashViewController : UITableViewDataSource, UITableViewDelegate {
@@ -61,4 +55,22 @@ extension TrashViewController : UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.numberOfLines = 0
         cell.selectionStyle = .none
     }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let undone = UIContextualAction(style: .normal, title: Constants.MARK_AS_UNDONE) { [weak self](ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            guard let weakSelf = self else {
+                return
+            }
+            weakSelf.delegate?.trashViewController(trashViewController: weakSelf, didMarkUndone: weakSelf.deletedTasks[indexPath.row])
+            self?.deletedTasks.remove(at: indexPath.row)
+            self?.trashTableView.deleteRows(at: [indexPath], with: .fade)
+            success(true)
+        }
+        return UISwipeActionsConfiguration(actions: [undone])
+    }
 }
+
+protocol TrashViewControllerDelegate : class {
+    func trashViewController(trashViewController: TrashViewController, didMarkUndone task: Task)
+}
+

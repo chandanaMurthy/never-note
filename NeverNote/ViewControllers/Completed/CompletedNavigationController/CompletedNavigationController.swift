@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class CompletedNavigationController : UINavigationController {
-    let completedViewController = UIViewController.completed
-    let notesViewController = UIViewController.notes
-    let trashViewController = UIViewController.trash
+    private let completedViewController = UIViewController.completed
+    private let notesViewController = UIViewController.notes
+    private let trashViewController = UIViewController.trash
     weak var completedDelegate : CompletedNavigationControllerDelegate?
     
     override func viewDidLoad() {
@@ -39,7 +39,6 @@ extension CompletedNavigationController {
         completedViewController.insert(task: task)
     }
 }
-
 
 protocol CompletedNavigationControllerDelegate : class {
     func completedNavigationController(completedNavigationController : CompletedNavigationController, didDelete task: Task)

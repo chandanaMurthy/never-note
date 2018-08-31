@@ -10,15 +10,12 @@ import Foundation
 import UIKit
 
 class NotesViewController: UIViewController {
-    private let NAVIGATION_BAR_TITLE = "Notes"
     private let BACK_BUTTON_TITLE = "Back"
-    private let CELL_IDENTIFIER = "cellIdentifier"
     private let COMPLETED_ACTION_TITLE = "Mark Done"
     
     private var tasks = [Task]()
-
     weak var delegate: NotesViewControllerDelegate?
-    var notesIndexPathArray = [IndexPath]()
+    private var notesIndexPathArray = [IndexPath]()
     
     @IBOutlet weak var notesTableView: UITableView!
     
@@ -35,7 +32,7 @@ class NotesViewController: UIViewController {
     }
     
     private func configureNavigationBar() {
-        self.navigationItem.title = NAVIGATION_BAR_TITLE
+        self.navigationItem.title = Constants.NOTES
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         let rightNavBarButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(didTapRightBarButton))
         rightNavBarButton.tintColor = UIColor.white
@@ -63,7 +60,7 @@ extension NotesViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = notesTableView.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER, for: indexPath)
+        let cell = notesTableView.dequeueReusableCell(withIdentifier: Constants.REUSE_IDENTIFIER, for: indexPath)
         cell.textLabel?.text = tasks[indexPath.row].taskTitle
         return cell
     }
@@ -71,7 +68,7 @@ extension NotesViewController : UITableViewDataSource, UITableViewDelegate {
     private func setupTableView() {
         self.notesTableView.dataSource = self
         self.notesTableView.delegate = self
-        self.notesTableView.register(UITableViewCell.self, forCellReuseIdentifier: CELL_IDENTIFIER)
+        self.notesTableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.REUSE_IDENTIFIER)
         
         tasks.append(Task(taskTitle: "A", taskDetails: "A"))
         tasks.append(Task(taskTitle: "B", taskDetails: "B"))
