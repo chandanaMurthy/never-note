@@ -26,7 +26,6 @@ class HomeTabBarController: UITabBarController {
         super.viewDidLoad()
         setupTabBar()
         assignDelegates()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     private func setupTabBar() {
@@ -39,8 +38,9 @@ class HomeTabBarController: UITabBarController {
     }
     
     private func assignDelegates() {
-        self.notesNavigationController.notesNavDelegate = self
+        notesNavigationController.notesNavDelegate = self
         completedNavigationController.completedDelegate = self
+        trashNavigationController.trashDelegate = self
     }
 }
 
@@ -66,3 +66,8 @@ extension HomeTabBarController: NotesNavigationControllerDelegate {
     }
 }
 
+extension HomeTabBarController : TrashNavigationControllerDelegate {
+    func trashNavigationController(trashNavigationController: TrashNavigationController, didMarkUndone task: Task) {
+        notesNavigationController.appendToNotes(task: task)
+    }
+}

@@ -24,13 +24,14 @@ class TrashNavigationController : UINavigationController {
     }
 }
 
+<<<<<<< HEAD
 extension TrashNavigationController {
     //Insert a task from Notes to Trash
     func insert(task: Task) {
         self.trashViewController.insert(task: task)
     }
 }
-
+=======
 extension TrashNavigationController : TrashViewControllerDelegate {
     func trashViewController(trashViewController: TrashViewController, didMarkUndone task: Task) {
         notesViewController.appendToNotes(task: task)
@@ -41,4 +42,4 @@ extension TrashNavigationController : TrashViewControllerDelegate {
 protocol TrashNavigationControllerDelegate : class {
     func trashNavigationController(trashNavigationController : TrashNavigationController, didMarkUndone task: Task)
 }
-
+>>>>>>> eacb5651532d3e96b362d57a67c1a9f92cced6a7
