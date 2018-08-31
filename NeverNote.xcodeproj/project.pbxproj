@@ -23,7 +23,6 @@
 		17F623742135177500085518 /* SettingsNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F623732135177500085518 /* SettingsNavigationController.storyboard */; };
 		17F62376213517A200085518 /* TrashNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F62375213517A200085518 /* TrashNavigationController.storyboard */; };
 		17F62378213517AD00085518 /* TrashNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F62377213517AD00085518 /* TrashNavigationController.swift */; };
-		17F6237A213517C000085518 /* CompletedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F62379213517C000085518 /* CompletedNavigationController.swift */; };
 		17F6237C213517C900085518 /* CompletedNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F6237B213517C900085518 /* CompletedNavigationController.storyboard */; };
 		48695095212FFF2A00DED227 /* AddScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48695094212FFF2A00DED227 /* AddScreenViewController.storyboard */; };
 		48695097212FFFD800DED227 /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48695096212FFFD800DED227 /* AddScreenViewController.swift */; };
@@ -37,6 +36,7 @@
 		486BF2782134350A00363775 /* NotesNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486BF2772134350A00363775 /* NotesNavigationController.storyboard */; };
 		486BF28D2136797900363775 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BF28C2136797900363775 /* SampleViewController.swift */; };
 		486BF2912136BD7D00363775 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BF2902136BD7D00363775 /* Task.swift */; };
+		4893F5652138367900CDEF9C /* CompletedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4893F5642138367900CDEF9C /* CompletedNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +79,6 @@
 		17F623732135177500085518 /* SettingsNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsNavigationController.storyboard; sourceTree = "<group>"; };
 		17F62375213517A200085518 /* TrashNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrashNavigationController.storyboard; sourceTree = "<group>"; };
 		17F62377213517AD00085518 /* TrashNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashNavigationController.swift; sourceTree = "<group>"; };
-		17F62379213517C000085518 /* CompletedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedNavigationController.swift; sourceTree = "<group>"; };
 		17F6237B213517C900085518 /* CompletedNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompletedNavigationController.storyboard; sourceTree = "<group>"; };
 		48695094212FFF2A00DED227 /* AddScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddScreenViewController.storyboard; sourceTree = "<group>"; };
 		48695096212FFFD800DED227 /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		486BF2772134350A00363775 /* NotesNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotesNavigationController.storyboard; sourceTree = "<group>"; };
 		486BF28C2136797900363775 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		486BF2902136BD7D00363775 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		4893F5642138367900CDEF9C /* CompletedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,7 +237,7 @@
 		17F62370213515A500085518 /* CompletedNavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				17F62379213517C000085518 /* CompletedNavigationController.swift */,
+				4893F5642138367900CDEF9C /* CompletedNavigationController.swift */,
 				17F6237B213517C900085518 /* CompletedNavigationController.storyboard */,
 			);
 			path = CompletedNavigationController;
@@ -322,8 +322,8 @@
 		486950A421303BD500DED227 /* Completed */ = {
 			isa = PBXGroup;
 			children = (
-				17F62370213515A500085518 /* CompletedNavigationController */,
 				17F6236E2135157000085518 /* CompletedViewController */,
+				17F62370213515A500085518 /* CompletedNavigationController */,
 			);
 			path = Completed;
 			sourceTree = "<group>";
@@ -504,13 +504,13 @@
 				48695097212FFFD800DED227 /* AddScreenViewController.swift in Sources */,
 				486BF28D2136797900363775 /* SampleViewController.swift in Sources */,
 				486BF2912136BD7D00363775 /* Task.swift in Sources */,
+				4893F5652138367900CDEF9C /* CompletedNavigationController.swift in Sources */,
 				17EDBDB921314EFE002B17F5 /* SettingsViewController.swift in Sources */,
 				17EDBDB421314E33002B17F5 /* TrashViewController.swift in Sources */,
 				1758ED3C21303D0A00618E51 /* Constants.swift in Sources */,
 				486950A02130266800DED227 /* UIStoryboard.swift in Sources */,
 				486950AC21303D1800DED227 /* CompletedTasksViewController.swift in Sources */,
 				486950A22130279300DED227 /* UIViewController.swift in Sources */,
-				17F6237A213517C000085518 /* CompletedNavigationController.swift in Sources */,
 				17F62378213517AD00085518 /* TrashNavigationController.swift in Sources */,
 				486950A621303CC200DED227 /* NotesViewController.swift in Sources */,
 			);

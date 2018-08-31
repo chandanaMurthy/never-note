@@ -34,8 +34,16 @@ extension CompletedNavigationController : CompletedTasksViewControllerDelegate {
     }
 }
 
+extension CompletedNavigationController {
+    func insert(task: Task) {
+        completedViewController.insert(task: task)
+    }
+}
+
+
 protocol CompletedNavigationControllerDelegate : class {
     func completedNavigationController(completedNavigationController : CompletedNavigationController, didDelete task: Task)
     
     func completedNavigationController(completedNavigationController : CompletedNavigationController, didMarkUndone task: Task)
 }
+

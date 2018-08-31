@@ -9,10 +9,12 @@
 import UIKit
 
 class HomeTabBarController: UITabBarController {
-    let notesNavigationController = UIViewController.notesNavigationController
-    let completedNavigationController = UIViewController.completedNavigationController
-    let trashNavigationController = UIViewController.trashNavigationController
-    let settingsNavigationController = UIViewController.settingsNavigationController
+    private let notesNavigationController = UIViewController.notesNavigationController
+    private let completedNavigationController = UIViewController.completedNavigationController
+    private let trashNavigationController = UIViewController.trashNavigationController
+    private let settingsNavigationController = UIViewController.settingsNavigationController
+    
+    private let addScreen = UIViewController.addScreen
     
     override var selectedViewController: UIViewController? {
         didSet {
@@ -23,25 +25,44 @@ class HomeTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
-        completedNavigationController.completedDelegate = self
+        assignDelegates()
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func setupTabBar() {
+    private func setupTabBar() {
         notesNavigationController.tabBarItem = UITabBarItem(title: Constants.NOTES, image: #imageLiteral(resourceName: "Notes").withRenderingMode(.alwaysTemplate), tag: 10)
         completedNavigationController.tabBarItem = UITabBarItem(title: Constants.COMPLETED, image: #imageLiteral(resourceName: "Done").withRenderingMode(.alwaysTemplate), tag: 12)
         trashNavigationController.tabBarItem = UITabBarItem(title: Constants.TRASH, image: #imageLiteral(resourceName: "Trash").withRenderingMode(.alwaysTemplate), tag: 14)
         settingsNavigationController.tabBarItem = UITabBarItem(title: Constants.SETTINGS, image: #imageLiteral(resourceName: "Settings").withRenderingMode(.alwaysTemplate), tag: 16)
+        
         self.viewControllers = [notesNavigationController, completedNavigationController, trashNavigationController, settingsNavigationController]
     }
+    
+    private func assignDelegates() {
+        self.notesNavigationController.notesNavDelegate = self
+        completedNavigationController.completedDelegate = self
+    }
 }
+
 
 extension HomeTabBarController : CompletedNavigationControllerDelegate {
     func completedNavigationController(completedNavigationController: CompletedNavigationController, didDelete task: Task) {
         trashNavigationController.append(task: task)
     }
     
+    
     func completedNavigationController(completedNavigationController: CompletedNavigationController, didMarkUndone task: Task) {
         notesNavigationController.appendToNotes(task: task)
+    }
+}
+
+extension HomeTabBarController: NotesNavigationControllerDelegate {
+    func notesNavigationController(notesNavigationController: NotesNavigationController, didCompleteTask task: Task) {
+        completedNavigationController.insert(task: task)
+    }
+    
+    func notesNavigationController(notesNavigationController: NotesNavigationController, didDeleteTask task: Task) {
+        
     }
 }
 

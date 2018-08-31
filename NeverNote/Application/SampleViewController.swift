@@ -31,5 +31,19 @@ class SampleViewController: UIViewController {
         animationType.toValue = NSValue(cgPoint: CGPoint(x: self.view.center.x + 20, y: self.view.center.y))
         self.view.layer.add(animationType, forKey: "position")
     }
+    
+//    func getDataFrom(URL: String) -> String? {
+//        var request = NSMutableURLRequest()
+//        request.httpMethod = "GET"
+//        let error : NSError? = nil
+//        let responseCode : HTTPURLResponse? = nil
+//
+//        let responseData = NSURLConnection.sendSynchronousRequest(request as? URLRequest, returning: responseCode)
+//        if responseCode?.statusCode != 200 {
+//            print(URL, responseCode?.statusCode)
+//            return nil
+//        }
+//        return String(data: responseData, encoding: NSUTF8StringEncoding)
+//    }
 
 }

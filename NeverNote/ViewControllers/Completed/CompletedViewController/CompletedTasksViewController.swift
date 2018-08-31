@@ -5,16 +5,19 @@ import UIKit
 class CompletedTasksViewController: UIViewController {
     @IBOutlet weak var completedTasksTableView: UITableView!
     weak var delegate : CompletedTasksViewControllerDelegate?
-    var completedTasks = [Task]()
+    
+    private var completedTasks = [Task]()
+    private var completedTasksChanged = false
+    private var indexPathArray = [IndexPath]()
     
     
-    func setupTableView() {
+    private func setupTableView() {
         completedTasksTableView.delegate = self
         completedTasksTableView.dataSource = self
         completedTasksTableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.REUSE_IDENTIFIER)
     }
     
-    func addToCompletedTableView() {
+    private func addToCompletedTableView() {
         completedTasks.append(Task(taskTitle: "Completed1", taskDetails: "Completed once"))
         completedTasks.append(Task(taskTitle: "Completed2", taskDetails: "Completed twice"))
         completedTasks.append(Task(taskTitle: "Completed3", taskDetails: "Completed once"))
@@ -32,7 +35,22 @@ class CompletedTasksViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         setupTableView()
-        addToCompletedTableView()
+        self.completedTasksTableView.reloadData()
+        self.completedTasksChanged = false
+        self.indexPathArray.removeAll()
+        print("ViewDidLoad!")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("ViewWillAppear")
+        if self.completedTasksChanged {
+            print("ViewWillAppear IF")
+            self.completedTasksTableView.insertRows(at: indexPathArray, with: .automatic)
+            self.completedTasksChanged = false
+            self.indexPathArray.removeAll()
+        }
+        
     }
 }
 
@@ -86,4 +104,11 @@ protocol CompletedTasksViewControllerDelegate : class {
     func completedTasksViewController(completedTaskViewController: CompletedTasksViewController, didMarkUndone task: Task)
 }
 
-
+extension CompletedTasksViewController {
+    func insert(task: Task) {
+        self.completedTasks.append(task)
+        let indexPath = IndexPath(row: completedTasks.count - 1, section: 0)
+        self.indexPathArray.append(indexPath)
+        self.completedTasksChanged = true
+    }
+}
