@@ -11,7 +11,6 @@ class CompletedTasksViewController: UIViewController {
     private func setupTableView() {
         completedTasksTableView.delegate = self
         completedTasksTableView.dataSource = self
-        completedTasksTableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.REUSE_IDENTIFIER)
     }
     
     private func setupNavigationBar() {
@@ -54,9 +53,20 @@ class CompletedTasksViewController: UIViewController {
         }
     }
     
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.definesPresentationContext = true
+        hideKeyboardWhenTappedAround()
         setupNavigationBar()
         setupTableView()
         integrateSearchBar()
@@ -85,8 +95,10 @@ extension CompletedTasksViewController: UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.font = UIFont(name: Constants.AVENIR_NEXT, size: 18)
         if isFiltering() {
             cell.textLabel?.text = completedViewModel.getFilteredDataName(at: indexPath.row).taskTitle
+            cell.detailTextLabel?.text = completedViewModel.getFilteredDataName(at: indexPath.row).taskDetails
         } else {
             cell.textLabel?.text = completedViewModel.getCompletedTaskName(at: indexPath.row).taskTitle
+            cell.detailTextLabel?.text = completedViewModel.getCompletedTaskName(at: indexPath.row).taskDetails
         }
         return cell
     }

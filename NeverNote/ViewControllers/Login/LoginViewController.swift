@@ -33,6 +33,11 @@ class LoginViewController: UIViewController {
         rotateImage()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        rotateImage()
+    }
+    
     func rotateImage() {
         UIView.animate(withDuration: 2) {
             self.imageView.transform = CGAffineTransform(rotationAngle: .pi)

@@ -34,7 +34,11 @@ class TrashViewModel {
     func getDeletedTaskName(at index: Int) -> Task {
         return deletedTasks[index]
     }
-    
+//
+//    func getDeletedTaskTitle(at index: Int) -> String {
+//        return deletedTasks[index].taskDetails
+//    }
+//
     func getDeletedTasksCount() -> Int {
         return deletedTasks.count
     }

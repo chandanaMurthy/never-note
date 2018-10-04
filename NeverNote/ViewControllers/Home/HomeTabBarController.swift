@@ -29,6 +29,7 @@ class HomeTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
+        self.definesPresentationContext = true
         assignDelegates()
         setGlobalAppearance()
     }

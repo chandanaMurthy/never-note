@@ -28,9 +28,20 @@ class NotesViewController: UIViewController {
         extendedLayoutIncludesOpaqueBars = true
     }
     
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.definesPresentationContext = true
+        hideKeyboardWhenTappedAround()
         notesViewModel.delegate = self
         integrateSearchBar()
         createUILabel()
@@ -49,34 +60,8 @@ class NotesViewController: UIViewController {
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: Constants.AVENIR_NEXT, size: 19)]
         self.navigationController?.navigationBar.titleTextAttributes = titleTextAttributes as [NSAttributedString.Key: Any]
         let rightNavBarButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(didTapRightBarButton))
-        let leftNavBarButton = UIBarButtonItem(image: UIImage(named: notesViewModel.LOGOUT)?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(didTapLogOutButton))
         rightNavBarButton.tintColor = UIColor.white
         self.navigationItem.rightBarButtonItem = rightNavBarButton
-        self.navigationItem.leftBarButtonItem = leftNavBarButton
-    }
-    
-    func loadLoginScreen() {
-        let loginViewController = UIViewController.login
-        self.present(loginViewController, animated: true, completion: nil)
-    }
-    
-    func showAlertController() {
-        let alertController = UIAlertController(title: notesViewModel.LOGOUT, message: notesViewModel.LOGOUT_MESSAGE, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: notesViewModel.CONFIRM, style: UIAlertAction.Style.default) {
-            UIAlertAction in
-            self.loadLoginScreen()
-        }
-        let cancelAction = UIAlertAction(title: notesViewModel.CANCEL, style: UIAlertAction.Style.cancel) {
-            UIAlertAction in
-            print("Cancel Pressed")
-        }
-        alertController.addAction(okAction)
-        alertController.addAction(cancelAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    @objc func didTapLogOutButton() {
-        showAlertController()
     }
     
     func appendToNotes(task: Task) {
@@ -105,8 +90,10 @@ extension NotesViewController: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.font = UIFont(name: Constants.AVENIR_NEXT, size: 18)
         if isFiltering() {
             cell.textLabel?.text = notesViewModel.getFilteredDataName(at: indexPath.row).taskTitle
+            cell.detailTextLabel?.text = notesViewModel.getFilteredDataName(at: indexPath.row).taskDetails
         } else {
             cell.textLabel?.text = notesViewModel.getTaskName(at: indexPath.row).taskTitle
+            cell.detailTextLabel?.text = notesViewModel.getTaskName(at: indexPath.row).taskDetails
         }
         return cell
     }
@@ -135,7 +122,6 @@ extension NotesViewController: UITableViewDataSource, UITableViewDelegate {
     private func setupTableView() {
         notesTableView.dataSource = self
         notesTableView.delegate = self
-        notesTableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.REUSE_IDENTIFIER)
         createTestTasks()
         notesTableView.reloadData()
     }

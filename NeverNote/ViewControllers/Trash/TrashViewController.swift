@@ -11,7 +11,6 @@ class TrashViewController: UIViewController {
     private func setupTableView() {
         trashTableView.delegate = self
         trashTableView.dataSource = self
-        trashTableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.REUSE_IDENTIFIER)
         self.definesPresentationContext = true
     }
 
@@ -68,8 +67,19 @@ class TrashViewController: UIViewController {
         extendedLayoutIncludesOpaqueBars = true
     }
     
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         setupNavigationBar()
         setupTableView()
         integrateSearchBar()
@@ -114,8 +124,10 @@ extension TrashViewController: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.font = UIFont(name: Constants.AVENIR_NEXT, size: 18)
         if isFiltering() {
             cell.textLabel?.text = trashViewModel.getFilteredDataName(at: indexPath.row).taskTitle
+            cell.detailTextLabel?.text = trashViewModel.getFilteredDataName(at: indexPath.row).taskDetails
         } else {
             cell.textLabel?.text = trashViewModel.getDeletedTaskName(at: indexPath.row).taskTitle
+            cell.detailTextLabel?.text = trashViewModel.getDeletedTaskName(at: indexPath.row).taskDetails
         }
         return cell
     }

@@ -10,11 +10,6 @@ import Foundation
 
 class NotesViewModel {
     weak var delegate: NotesViewModelDelegate?
-    let LOGOUT = "Logout"
-    let LOGOUT_MESSAGE = "Are You Sure You Want To Logout?"
-    let CONFIRM = "Yes"
-    let CANCEL = "Cancel"
-    
     private var tasks = [Task]() {
         didSet {
             if tasks.isEmpty {
