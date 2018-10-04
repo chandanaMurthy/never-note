@@ -14,26 +14,30 @@ class HomeTabBarController: UITabBarController {
     private let trashNavigationController = UIViewController.trashNavigationController
     private let settingsNavigationController = UIViewController.settingsNavigationController
     
-    private let addScreen = UIViewController.addScreen
-    
-    override var selectedViewController: UIViewController? {
-        didSet {
-            //print("tabitem \(selectedIndex) was selected")
-        }
+    func setGlobalAppearance() {
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: Constants.AVENIR_NEXT, size: 10) as Any], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: Constants.AVENIR_NEXT, size: 10) as Any], for: .selected)
+        UINavigationBar.appearance().barTintColor = UIColor.black
+        UINavigationBar.appearance().isTranslucent = false
+        let searchBarPlaceHolder = UILabel.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+        searchBarPlaceHolder.font = UIFont(name: Constants.AVENIR_NEXT, size: 16)
+        searchBarPlaceHolder.textColor = UIColor.white
+        let searBarText = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+        searBarText.defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: Constants.AVENIR_NEXT, size: 16) as Any]
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
         assignDelegates()
+        setGlobalAppearance()
     }
     
     private func setupTabBar() {
-        notesNavigationController.tabBarItem = UITabBarItem(title: Constants.NOTES, image: #imageLiteral(resourceName: "Notes").withRenderingMode(.alwaysTemplate), tag: 10)
-        completedNavigationController.tabBarItem = UITabBarItem(title: Constants.COMPLETED, image: #imageLiteral(resourceName: "Done").withRenderingMode(.alwaysTemplate), tag: 12)
-        trashNavigationController.tabBarItem = UITabBarItem(title: Constants.TRASH, image: #imageLiteral(resourceName: "Trash").withRenderingMode(.alwaysTemplate), tag: 14)
-        settingsNavigationController.tabBarItem = UITabBarItem(title: Constants.SETTINGS, image: #imageLiteral(resourceName: "Settings").withRenderingMode(.alwaysTemplate), tag: 16)
-        
+        notesNavigationController.tabBarItem = UITabBarItem(title: Constants.NOTES, image: #imageLiteral(resourceName: "Notes").withRenderingMode(.alwaysTemplate), tag: 0)
+        completedNavigationController.tabBarItem = UITabBarItem(title: Constants.COMPLETED, image: #imageLiteral(resourceName: "Done").withRenderingMode(.alwaysTemplate), tag: 1)
+        trashNavigationController.tabBarItem = UITabBarItem(title: Constants.TRASH, image: #imageLiteral(resourceName: "Trash").withRenderingMode(.alwaysTemplate), tag: 2)
+        settingsNavigationController.tabBarItem = UITabBarItem(title: Constants.SETTINGS, image: #imageLiteral(resourceName: "Settings").withRenderingMode(.alwaysTemplate), tag: 3)
         self.viewControllers = [notesNavigationController, completedNavigationController, trashNavigationController, settingsNavigationController]
     }
     
@@ -44,12 +48,10 @@ class HomeTabBarController: UITabBarController {
     }
 }
 
-
-extension HomeTabBarController : CompletedNavigationControllerDelegate {
+extension HomeTabBarController: CompletedNavigationControllerDelegate {
     func completedNavigationController(completedNavigationController: CompletedNavigationController, didDelete task: Task) {
         trashNavigationController.append(task: task)
     }
-    
     
     func completedNavigationController(completedNavigationController: CompletedNavigationController, didMarkUndone task: Task) {
         notesNavigationController.appendToNotes(task: task)
@@ -66,7 +68,7 @@ extension HomeTabBarController: NotesNavigationControllerDelegate {
     }
 }
 
-extension HomeTabBarController : TrashNavigationControllerDelegate {
+extension HomeTabBarController: TrashNavigationControllerDelegate {
     func trashNavigationController(trashNavigationController: TrashNavigationController, didMarkUndone task: Task) {
         notesNavigationController.appendToNotes(task: task)
     }

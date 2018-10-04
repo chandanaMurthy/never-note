@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CompletedNavigationController : UINavigationController {
+class CompletedNavigationController: UINavigationController {
 <<<<<<< HEAD
     let completedViewController = UIViewController.completed
     let notesViewController = UIViewController.notes

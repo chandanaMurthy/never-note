@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CompletedNavigationController : UINavigationController {
+class CompletedNavigationController: UINavigationController {
     let completedViewController = UIViewController.completed
     
     override func viewDidLoad() {

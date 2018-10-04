@@ -9,9 +9,8 @@
 import Foundation
 import UIKit
 
-class CompletedNavigationController : UINavigationController {
+class CompletedNavigationController: UINavigationController {
     private let completedViewController = UIViewController.completed
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,4 +23,3 @@ extension CompletedNavigationController {
         completedViewController.insert(task: task)
     }
 }
-

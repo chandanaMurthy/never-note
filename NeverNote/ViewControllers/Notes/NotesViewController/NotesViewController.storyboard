@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,24 +19,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="oIe-YS-4wY">
-                                <rect key="frame" x="16" y="44" width="343" height="734"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yLb-y1-tdh" firstAttribute="trailing" secondItem="oIe-YS-4wY" secondAttribute="trailing" constant="16" id="Nui-tj-ZAu"/>
-                            <constraint firstItem="oIe-YS-4wY" firstAttribute="leading" secondItem="yLb-y1-tdh" secondAttribute="leading" constant="16" id="Sjt-yk-Osk"/>
+                            <constraint firstItem="yLb-y1-tdh" firstAttribute="trailing" secondItem="oIe-YS-4wY" secondAttribute="trailing" id="Nui-tj-ZAu"/>
+                            <constraint firstItem="oIe-YS-4wY" firstAttribute="leading" secondItem="yLb-y1-tdh" secondAttribute="leading" id="Sjt-yk-Osk"/>
+                            <constraint firstItem="oIe-YS-4wY" firstAttribute="top" secondItem="yLb-y1-tdh" secondAttribute="top" id="aSy-mU-ztI"/>
                             <constraint firstItem="oIe-YS-4wY" firstAttribute="bottom" secondItem="yLb-y1-tdh" secondAttribute="bottom" id="hi1-5n-kLq"/>
-                            <constraint firstItem="oIe-YS-4wY" firstAttribute="top" secondItem="yLb-y1-tdh" secondAttribute="top" id="xNN-78-bys"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yLb-y1-tdh"/>
                     </view>
                     <connections>
                         <outlet property="notesTableView" destination="oIe-YS-4wY" id="nKc-na-aBZ"/>
+                        <outlet property="searchDisplayController" destination="Ovq-w4-Y7M" id="8wa-dq-cAN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8z-Fu-xdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="YCw-Ji-OeL">
+                    <connections>
+                        <outlet property="delegate" destination="QXX-3T-7Gw" id="wmd-lB-cwB"/>
+                        <outlet property="searchContentsController" destination="QXX-3T-7Gw" id="Lme-qX-5Ko"/>
+                        <outlet property="searchResultsDataSource" destination="QXX-3T-7Gw" id="pGi-W5-bmm"/>
+                        <outlet property="searchResultsDelegate" destination="QXX-3T-7Gw" id="qMn-aV-KAG"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="Ovq-w4-Y7M">
+                    <connections>
+                        <outlet property="delegate" destination="QXX-3T-7Gw" id="Eoi-Fy-ih7"/>
+                        <outlet property="searchContentsController" destination="QXX-3T-7Gw" id="N32-tK-diH"/>
+                        <outlet property="searchResultsDataSource" destination="QXX-3T-7Gw" id="bIM-48-dLO"/>
+                        <outlet property="searchResultsDelegate" destination="QXX-3T-7Gw" id="2JC-lH-kpj"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="124" y="96.798029556650249"/>
         </scene>

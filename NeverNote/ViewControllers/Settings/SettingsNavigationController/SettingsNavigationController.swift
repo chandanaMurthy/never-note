@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SettingsNavigationController : UINavigationController {
+class SettingsNavigationController: UINavigationController {
     let settingViewController = UIViewController.settings
     
     override func viewDidLoad() {

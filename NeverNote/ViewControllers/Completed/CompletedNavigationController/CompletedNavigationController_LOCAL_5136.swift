@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class CompletedNavigationController : UINavigationController {
+class CompletedNavigationController: UINavigationController {
     let completedViewController = UIViewController.completed
     let notesViewController = UIViewController.notes
     let trashViewController = UIViewController.trash
-    weak var completedDelegate : CompletedNavigationControllerDelegate?
+    weak var completedDelegate: CompletedNavigationControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class CompletedNavigationController : UINavigationController {
     }
 }
 
-extension CompletedNavigationController : CompletedTasksViewControllerDelegate {
+extension CompletedNavigationController: CompletedTasksViewControllerDelegate {
     func completedTasksViewController(completedTaskViewController: CompletedTasksViewController, didDelete task: Task) {
         notesViewController.appendToNotes(task: task)
         completedDelegate?.completedNavigationController(completedNavigationController: self, didDelete: task)
@@ -34,8 +34,8 @@ extension CompletedNavigationController : CompletedTasksViewControllerDelegate {
     }
 }
 
-protocol CompletedNavigationControllerDelegate : class {
-    func completedNavigationController(completedNavigationController : CompletedNavigationController, didDelete task: Task)
+protocol CompletedNavigationControllerDelegate: class {
+    func completedNavigationController(completedNavigationController: CompletedNavigationController, didDelete task: Task)
     
-    func completedNavigationController(completedNavigationController : CompletedNavigationController, didMarkUndone task: Task)
+    func completedNavigationController(completedNavigationController: CompletedNavigationController, didMarkUndone task: Task)
 }

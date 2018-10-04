@@ -1,22 +1,18 @@
-
 import Foundation
 import RealmSwift
 
 class DatabaseManager {
     static var realm: Realm? {
-        get {
-            do {
-                let realm = try Realm()
-                return realm
-            }
-            catch {
-                print("unexpected error: \(error).")
-            }
-            return nil
+    do {
+        let realm = try Realm()
+        return realm
+        } catch {
+            print("unexpected error: \(error).")
         }
+        return nil
     }
     
-    public static func write(realm: Realm, writeClosure: () -> ()) {
+    public static func write(realm: Realm, writeClosure: () -> Void) {
         do {
             try realm.write {
                 writeClosure()
@@ -26,4 +22,3 @@ class DatabaseManager {
         }
     }
 }
-

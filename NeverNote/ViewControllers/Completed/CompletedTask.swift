@@ -9,6 +9,6 @@
 import Foundation
 import RealmSwift
 
-class CompletedTask : Object {
+class CompletedTask: Object {
     @objc dynamic var taskName = ""
 }

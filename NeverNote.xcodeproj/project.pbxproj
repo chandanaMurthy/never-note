@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BEABB559E5FD4BCC71C0A92 /* Pods_NeverNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A5276DAF2351A043491E1B /* Pods_NeverNote.framework */; };
+		17094D782161E987004573F4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17094D772161E987004573F4 /* Service.swift */; };
+		17094D7B2161EED2004573F4 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17094D7A2161EED2004573F4 /* LoginViewController.storyboard */; };
+		17094D7D2161F699004573F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17094D7C2161F699004573F4 /* LoginViewController.swift */; };
 		1758ED3C21303D0A00618E51 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1758ED3B21303D0A00618E51 /* Constants.swift */; };
+		1767D377215233FD00503E3B /* TrashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1767D376215233FD00503E3B /* TrashViewModel.swift */; };
+		1767D3792152658B00503E3B /* CompletedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1767D3782152658B00503E3B /* CompletedViewModel.swift */; };
+		1767D37B21526B3100503E3B /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1767D37A21526B3100503E3B /* NotesViewModel.swift */; };
+		1767D37D21527C6700503E3B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1767D37C21527C6700503E3B /* SettingsViewModel.swift */; };
+		17E9D62A2164A35800A2ACA6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9D6292164A35800A2ACA6 /* RegisterViewController.swift */; };
+		17E9D62C2164A36800A2ACA6 /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E9D62B2164A36800A2ACA6 /* RegisterViewController.storyboard */; };
+		17E9D6302164DFE400A2ACA6 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9D62F2164DFE400A2ACA6 /* RegisterViewModel.swift */; };
 		17E9EDBF212FD9E7007D56CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9EDBE212FD9E7007D56CB /* AppDelegate.swift */; };
 		17E9EDC1212FD9E7007D56CB /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9EDC0212FD9E7007D56CB /* HomeTabBarController.swift */; };
-		17E9EDC4212FD9E7007D56CB /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E9EDC2212FD9E7007D56CB /* HomeViewController.storyboard */; };
+		17E9EDC4212FD9E7007D56CB /* HomeTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E9EDC2212FD9E7007D56CB /* HomeTabBarController.storyboard */; };
 		17E9EDC6212FD9E7007D56CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17E9EDC5212FD9E7007D56CB /* Assets.xcassets */; };
 		17E9EDC9212FD9E7007D56CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E9EDC7212FD9E7007D56CB /* LaunchScreen.storyboard */; };
 		17E9EDD4212FD9E8007D56CB /* NeverNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9EDD3212FD9E8007D56CB /* NeverNoteTests.swift */; };
@@ -34,9 +45,10 @@
 		486950AC21303D1800DED227 /* CompletedTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486950AB21303D1800DED227 /* CompletedTasksViewController.swift */; };
 		486BF2762134329700363775 /* NotesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BF2752134329700363775 /* NotesNavigationController.swift */; };
 		486BF2782134350A00363775 /* NotesNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486BF2772134350A00363775 /* NotesNavigationController.storyboard */; };
-		486BF28D2136797900363775 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BF28C2136797900363775 /* SampleViewController.swift */; };
 		486BF2912136BD7D00363775 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BF2902136BD7D00363775 /* Task.swift */; };
 		4893F5652138367900CDEF9C /* CompletedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4893F5642138367900CDEF9C /* CompletedNavigationController.swift */; };
+		59E6F5FBD2B111745DA3186C /* Pods_NeverNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DA8EF5BAE8C515FC4B8AEF /* Pods_NeverNoteTests.framework */; };
+		E989CD023781A93B31495DFB /* Pods_NeverNoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB74BE1AA55ACC96AC3628C /* Pods_NeverNoteUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +69,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17094D772161E987004573F4 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		17094D7A2161EED2004573F4 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		17094D7C2161F699004573F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1758ED3B21303D0A00618E51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1767D376215233FD00503E3B /* TrashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashViewModel.swift; sourceTree = "<group>"; };
+		1767D3782152658B00503E3B /* CompletedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewModel.swift; sourceTree = "<group>"; };
+		1767D37A21526B3100503E3B /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		1767D37C21527C6700503E3B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		17E9D6292164A35800A2ACA6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		17E9D62B2164A36800A2ACA6 /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
+		17E9D62F2164DFE400A2ACA6 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		17E9EDBB212FD9E7007D56CB /* NeverNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeverNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E9EDBE212FD9E7007D56CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17E9EDC0212FD9E7007D56CB /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
-		17E9EDC3212FD9E7007D56CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeViewController.storyboard; sourceTree = "<group>"; };
+		17E9EDC3212FD9E7007D56CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeTabBarController.storyboard; sourceTree = "<group>"; };
 		17E9EDC5212FD9E7007D56CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17E9EDC8212FD9E7007D56CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17E9EDCA212FD9E7007D56CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +102,7 @@
 		17F62375213517A200085518 /* TrashNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrashNavigationController.storyboard; sourceTree = "<group>"; };
 		17F62377213517AD00085518 /* TrashNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashNavigationController.swift; sourceTree = "<group>"; };
 		17F6237B213517C900085518 /* CompletedNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompletedNavigationController.storyboard; sourceTree = "<group>"; };
+		462AA0C396113998FE0F9D2B /* Pods-NeverNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeverNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeverNote/Pods-NeverNote.debug.xcconfig"; sourceTree = "<group>"; };
 		48695094212FFF2A00DED227 /* AddScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddScreenViewController.storyboard; sourceTree = "<group>"; };
 		48695096212FFFD800DED227 /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
 		4869509F2130266800DED227 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
@@ -90,9 +113,16 @@
 		486950AB21303D1800DED227 /* CompletedTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksViewController.swift; sourceTree = "<group>"; };
 		486BF2752134329700363775 /* NotesNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesNavigationController.swift; sourceTree = "<group>"; };
 		486BF2772134350A00363775 /* NotesNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotesNavigationController.storyboard; sourceTree = "<group>"; };
-		486BF28C2136797900363775 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		486BF2902136BD7D00363775 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		4893F5642138367900CDEF9C /* CompletedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedNavigationController.swift; sourceTree = "<group>"; };
+		9432D9E13465482FE4B28206 /* Pods-NeverNoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeverNoteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeverNoteUITests/Pods-NeverNoteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		95A5276DAF2351A043491E1B /* Pods_NeverNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeverNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9957D04C8DEC8005247F30DF /* Pods-NeverNoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeverNoteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeverNoteUITests/Pods-NeverNoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A3730548CA82281E1C0346E1 /* Pods-NeverNoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeverNoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeverNoteTests/Pods-NeverNoteTests.release.xcconfig"; sourceTree = "<group>"; };
+		B1DA8EF5BAE8C515FC4B8AEF /* Pods_NeverNoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeverNoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1075B57DA609294194E8086 /* Pods-NeverNoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeverNoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeverNoteTests/Pods-NeverNoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DAB74BE1AA55ACC96AC3628C /* Pods_NeverNoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeverNoteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF9C5F8EEF2AEE41A49FB0C /* Pods-NeverNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeverNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeverNote/Pods-NeverNote.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BEABB559E5FD4BCC71C0A92 /* Pods_NeverNote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59E6F5FBD2B111745DA3186C /* Pods_NeverNoteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,12 +146,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E989CD023781A93B31495DFB /* Pods_NeverNoteUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17094D762161E850004573F4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				17094D772161E987004573F4 /* Service.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		17094D792161EEAF004573F4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				17094D7A2161EED2004573F4 /* LoginViewController.storyboard */,
+				17094D7C2161F699004573F4 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		17E9D6282164A33200A2ACA6 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				17E9D6292164A35800A2ACA6 /* RegisterViewController.swift */,
+				17E9D62B2164A36800A2ACA6 /* RegisterViewController.storyboard */,
+				17E9D62F2164DFE400A2ACA6 /* RegisterViewModel.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		17E9EDB2212FD9E7007D56CB = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +187,8 @@
 				17E9EDD2212FD9E8007D56CB /* NeverNoteTests */,
 				17E9EDDD212FD9E8007D56CB /* NeverNoteUITests */,
 				17E9EDBC212FD9E7007D56CB /* Products */,
+				22FA9A20E23C515855AF3C28 /* Pods */,
+				6E448ED528AB9EF2F6DD4889 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,12 +205,13 @@
 		17E9EDBD212FD9E7007D56CB /* NeverNote */ = {
 			isa = PBXGroup;
 			children = (
+				17094D762161E850004573F4 /* Services */,
 				486BF28F2136BD3500363775 /* Models */,
 				4869509C2130260000DED227 /* Application */,
-				4869509B213025F900DED227 /* Protocols */,
-				4869509A213025E900DED227 /* Frameworks */,
 				48695099213025DE00DED227 /* Extensions */,
 				48695098213025D400DED227 /* ViewControllers */,
+				4869509B213025F900DED227 /* Protocols */,
+				4869509A213025E900DED227 /* Frameworks */,
 			);
 			path = NeverNote;
 			sourceTree = "<group>";
@@ -174,8 +237,9 @@
 		17EDBDB121314DB0002B17F5 /* Trash */ = {
 			isa = PBXGroup;
 			children = (
-				17F6236F2135159100085518 /* TrashNavigationController */,
+				17F847152154B85F004FA654 /* TrashViewModel */,
 				17F6236D2135155500085518 /* TrashViewController */,
+				17F6236F2135159100085518 /* TrashNavigationController */,
 			);
 			path = Trash;
 			sourceTree = "<group>";
@@ -183,8 +247,9 @@
 		17EDBDB521314E74002B17F5 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				17F6236C213514E600085518 /* SettingsNavigationController */,
+				17F847142154B844004FA654 /* SettingsViewModel */,
 				17F6236B213514CF00085518 /* SettingsViewController */,
+				17F6236C213514E600085518 /* SettingsNavigationController */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -243,9 +308,56 @@
 			path = CompletedNavigationController;
 			sourceTree = "<group>";
 		};
+		17F847142154B844004FA654 /* SettingsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1767D37C21527C6700503E3B /* SettingsViewModel.swift */,
+			);
+			path = SettingsViewModel;
+			sourceTree = "<group>";
+		};
+		17F847152154B85F004FA654 /* TrashViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1767D376215233FD00503E3B /* TrashViewModel.swift */,
+			);
+			name = TrashViewModel;
+			sourceTree = "<group>";
+		};
+		17F847162154B878004FA654 /* CompletedTasksViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1767D3782152658B00503E3B /* CompletedViewModel.swift */,
+			);
+			path = CompletedTasksViewModel;
+			sourceTree = "<group>";
+		};
+		17F847172154B887004FA654 /* NotesViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1767D37A21526B3100503E3B /* NotesViewModel.swift */,
+			);
+			path = NotesViewModel;
+			sourceTree = "<group>";
+		};
+		22FA9A20E23C515855AF3C28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				462AA0C396113998FE0F9D2B /* Pods-NeverNote.debug.xcconfig */,
+				FAF9C5F8EEF2AEE41A49FB0C /* Pods-NeverNote.release.xcconfig */,
+				D1075B57DA609294194E8086 /* Pods-NeverNoteTests.debug.xcconfig */,
+				A3730548CA82281E1C0346E1 /* Pods-NeverNoteTests.release.xcconfig */,
+				9957D04C8DEC8005247F30DF /* Pods-NeverNoteUITests.debug.xcconfig */,
+				9432D9E13465482FE4B28206 /* Pods-NeverNoteUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		48695098213025D400DED227 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				17E9D6282164A33200A2ACA6 /* Register */,
+				17094D792161EEAF004573F4 /* Login */,
 				17EDBDB521314E74002B17F5 /* Settings */,
 				17EDBDB121314DB0002B17F5 /* Trash */,
 				486950A421303BD500DED227 /* Completed */,
@@ -287,7 +399,6 @@
 				17E9EDC5212FD9E7007D56CB /* Assets.xcassets */,
 				17E9EDC7212FD9E7007D56CB /* LaunchScreen.storyboard */,
 				1758ED3B21303D0A00618E51 /* Constants.swift */,
-				486BF28C2136797900363775 /* SampleViewController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -304,7 +415,7 @@
 		4869509E2130262400DED227 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				17E9EDC2212FD9E7007D56CB /* HomeViewController.storyboard */,
+				17E9EDC2212FD9E7007D56CB /* HomeTabBarController.storyboard */,
 				17E9EDC0212FD9E7007D56CB /* HomeTabBarController.swift */,
 			);
 			path = Home;
@@ -313,6 +424,7 @@
 		486950A321303BB900DED227 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				17F847172154B887004FA654 /* NotesViewModel */,
 				486BF2792134367700363775 /* NotesViewController */,
 				486BF27A2134369700363775 /* NotesNavigationController */,
 			);
@@ -322,6 +434,7 @@
 		486950A421303BD500DED227 /* Completed */ = {
 			isa = PBXGroup;
 			children = (
+				17F847162154B878004FA654 /* CompletedTasksViewModel */,
 				17F6236E2135157000085518 /* CompletedViewController */,
 				17F62370213515A500085518 /* CompletedNavigationController */,
 			);
@@ -354,6 +467,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		6E448ED528AB9EF2F6DD4889 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95A5276DAF2351A043491E1B /* Pods_NeverNote.framework */,
+				B1DA8EF5BAE8C515FC4B8AEF /* Pods_NeverNoteTests.framework */,
+				DAB74BE1AA55ACC96AC3628C /* Pods_NeverNoteUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -361,9 +484,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17E9EDE3212FD9E8007D56CB /* Build configuration list for PBXNativeTarget "NeverNote" */;
 			buildPhases = (
+				3BA0E3A35B6462635BFED166 /* [CP] Check Pods Manifest.lock */,
 				17E9EDB7212FD9E7007D56CB /* Sources */,
 				17E9EDB8212FD9E7007D56CB /* Frameworks */,
 				17E9EDB9212FD9E7007D56CB /* Resources */,
+				1764E70D214F88190089A3CA /* ShellScript */,
+				DADC6DBA8921D63A8B927C40 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -378,6 +504,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17E9EDE6212FD9E8007D56CB /* Build configuration list for PBXNativeTarget "NeverNoteTests" */;
 			buildPhases = (
+				E06A11AF998A74398E548F11 /* [CP] Check Pods Manifest.lock */,
 				17E9EDCB212FD9E8007D56CB /* Sources */,
 				17E9EDCC212FD9E8007D56CB /* Frameworks */,
 				17E9EDCD212FD9E8007D56CB /* Resources */,
@@ -396,6 +523,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17E9EDE9212FD9E8007D56CB /* Build configuration list for PBXNativeTarget "NeverNoteUITests" */;
 			buildPhases = (
+				61FFE5BD3E3ED447C48A9C84 /* [CP] Check Pods Manifest.lock */,
 				17E9EDD6212FD9E8007D56CB /* Sources */,
 				17E9EDD7212FD9E8007D56CB /* Frameworks */,
 				17E9EDD8212FD9E8007D56CB /* Resources */,
@@ -422,15 +550,18 @@
 				TargetAttributes = {
 					17E9EDBA212FD9E7007D56CB = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					17E9EDCE212FD9E8007D56CB = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 17E9EDBA212FD9E7007D56CB;
 					};
 					17E9EDD9212FD9E8007D56CB = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 17E9EDBA212FD9E7007D56CB;
 					};
@@ -470,9 +601,11 @@
 				17E9EDC9212FD9E7007D56CB /* LaunchScreen.storyboard in Resources */,
 				486950A821303CEB00DED227 /* NotesViewController.storyboard in Resources */,
 				17F62376213517A200085518 /* TrashNavigationController.storyboard in Resources */,
+				17E9D62C2164A36800A2ACA6 /* RegisterViewController.storyboard in Resources */,
 				17E9EDC6212FD9E7007D56CB /* Assets.xcassets in Resources */,
 				486BF2782134350A00363775 /* NotesNavigationController.storyboard in Resources */,
-				17E9EDC4212FD9E7007D56CB /* HomeViewController.storyboard in Resources */,
+				17E9EDC4212FD9E7007D56CB /* HomeTabBarController.storyboard in Resources */,
+				17094D7B2161EED2004573F4 /* LoginViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,27 +625,140 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1764E70D214F88190089A3CA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		3BA0E3A35B6462635BFED166 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NeverNote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61FFE5BD3E3ED447C48A9C84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NeverNoteUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DADC6DBA8921D63A8B927C40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NeverNote/Pods-NeverNote-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeverNote/Pods-NeverNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E06A11AF998A74398E548F11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NeverNoteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		17E9EDB7212FD9E7007D56CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17094D7D2161F699004573F4 /* LoginViewController.swift in Sources */,
+				17E9D62A2164A35800A2ACA6 /* RegisterViewController.swift in Sources */,
 				17E9EDC1212FD9E7007D56CB /* HomeTabBarController.swift in Sources */,
+				1767D37B21526B3100503E3B /* NotesViewModel.swift in Sources */,
 				17E9EDBF212FD9E7007D56CB /* AppDelegate.swift in Sources */,
+				1767D3792152658B00503E3B /* CompletedViewModel.swift in Sources */,
 				17F623722135176000085518 /* SettingsNavigationController.swift in Sources */,
 				486BF2762134329700363775 /* NotesNavigationController.swift in Sources */,
 				48695097212FFFD800DED227 /* AddScreenViewController.swift in Sources */,
-				486BF28D2136797900363775 /* SampleViewController.swift in Sources */,
+				1767D377215233FD00503E3B /* TrashViewModel.swift in Sources */,
 				486BF2912136BD7D00363775 /* Task.swift in Sources */,
 				4893F5652138367900CDEF9C /* CompletedNavigationController.swift in Sources */,
 				17EDBDB921314EFE002B17F5 /* SettingsViewController.swift in Sources */,
 				17EDBDB421314E33002B17F5 /* TrashViewController.swift in Sources */,
 				1758ED3C21303D0A00618E51 /* Constants.swift in Sources */,
 				486950A02130266800DED227 /* UIStoryboard.swift in Sources */,
+				1767D37D21527C6700503E3B /* SettingsViewModel.swift in Sources */,
 				486950AC21303D1800DED227 /* CompletedTasksViewController.swift in Sources */,
 				486950A22130279300DED227 /* UIViewController.swift in Sources */,
+				17094D782161E987004573F4 /* Service.swift in Sources */,
 				17F62378213517AD00085518 /* TrashNavigationController.swift in Sources */,
 				486950A621303CC200DED227 /* NotesViewController.swift in Sources */,
+				17E9D6302164DFE400A2ACA6 /* RegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,12 +794,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		17E9EDC2212FD9E7007D56CB /* HomeViewController.storyboard */ = {
+		17E9EDC2212FD9E7007D56CB /* HomeTabBarController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				17E9EDC3212FD9E7007D56CB /* Base */,
 			);
-			name = HomeViewController.storyboard;
+			name = HomeTabBarController.storyboard;
 			sourceTree = "<group>";
 		};
 		17E9EDC7212FD9E7007D56CB /* LaunchScreen.storyboard */ = {
@@ -680,34 +926,41 @@
 		};
 		17E9EDE4212FD9E8007D56CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 462AA0C396113998FE0F9D2B /* Pods-NeverNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MJ4K44BL6G;
 				INFOPLIST_FILE = "$(SRCROOT)/NeverNote/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNoteSecond;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		17E9EDE5212FD9E8007D56CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAF9C5F8EEF2AEE41A49FB0C /* Pods-NeverNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MJ4K44BL6G;
 				INFOPLIST_FILE = "$(SRCROOT)/NeverNote/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNoteSecond;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		17E9EDE7212FD9E8007D56CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1075B57DA609294194E8086 /* Pods-NeverNoteTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -716,7 +969,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNoteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeverNote.app/NeverNote";
 			};
@@ -724,6 +977,7 @@
 		};
 		17E9EDE8212FD9E8007D56CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3730548CA82281E1C0346E1 /* Pods-NeverNoteTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -732,7 +986,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNoteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeverNote.app/NeverNote";
 			};
@@ -740,6 +994,7 @@
 		};
 		17E9EDEA212FD9E8007D56CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9957D04C8DEC8005247F30DF /* Pods-NeverNoteUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -747,7 +1002,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNoteUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = NeverNote;
 			};
@@ -755,6 +1010,7 @@
 		};
 		17E9EDEB212FD9E8007D56CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9432D9E13465482FE4B28206 /* Pods-NeverNoteUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -762,7 +1018,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.infrrd.kindergarten.NeverNoteUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = NeverNote;
 			};
