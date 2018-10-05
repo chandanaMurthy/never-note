@@ -60,6 +60,7 @@ class CompletedTasksViewController: UIViewController {
     }
     
     @objc func dismissKeyboard() {
+        searchController.searchBar.endEditing(true)
         view.endEditing(true)
     }
     
@@ -101,6 +102,10 @@ extension CompletedTasksViewController: UITableViewDelegate, UITableViewDataSour
             cell.detailTextLabel?.text = completedViewModel.getCompletedTaskName(at: indexPath.row).taskDetails
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 65
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -163,9 +168,17 @@ extension CompletedTasksViewController: UISearchResultsUpdating {
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
+    func taskHasSearchText(searchText: String, index: Int) -> Bool {
+        let task = completedViewModel.getCompletedTaskName(at: index)
+        if task.taskTitle.lowercased().contains(searchText.lowercased()) || task.taskDetails.lowercased().contains(searchText.lowercased()) {
+            return true
+        }
+        return false
+    }
+    
     func filterContentForSearchText(_ searchText: String) {
         for index in 0..<completedViewModel.getCompledTasksCount() {
-            if completedViewModel.getCompletedTaskName(at: index).taskTitle.lowercased().contains(searchText.lowercased()) {
+            if taskHasSearchText(searchText: searchText, index: index) {
                 completedViewModel.addToFilteredData(task: completedViewModel.getCompletedTaskName(at: index))
                 completedViewModel.addToIndexArray(index: index)
             }

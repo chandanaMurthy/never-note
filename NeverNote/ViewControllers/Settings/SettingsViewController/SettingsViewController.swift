@@ -69,6 +69,7 @@ class SettingsViewController: UIViewController {
     }
     
     @objc func dismissKeyboard() {
+        searchController.searchBar.endEditing(true)
         view.endEditing(true)
     }
     

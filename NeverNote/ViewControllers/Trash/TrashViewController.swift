@@ -74,6 +74,7 @@ class TrashViewController: UIViewController {
     }
     
     @objc func dismissKeyboard() {
+        searchController.searchBar.endEditing(true)
         view.endEditing(true)
     }
     
@@ -136,6 +137,10 @@ extension TrashViewController: UITableViewDataSource, UITableViewDelegate {
         return CGFloat.leastNormalMagnitude
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 65
+    }
+    
     func removeTaskWhileFiltering(at indexPath: IndexPath) {
         trashViewModel.removeFromFilteredData(at: indexPath.row)
         trashViewModel.removeFromDeletedTasks(at: trashViewModel.getIndex(at: indexPath.row))
@@ -186,9 +191,17 @@ extension TrashViewController: UISearchResultsUpdating {
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
+    func taskHasSearchText(searchText: String, index: Int) -> Bool {
+        let task = trashViewModel.getDeletedTaskName(at: index)
+        if task.taskTitle.lowercased().contains(searchText.lowercased()) || task.taskDetails.lowercased().contains(searchText.lowercased()) {
+            return true
+        }
+        return false
+    }
+    
     func filterContentForSearchText(_ searchText: String) {
         for index in 0..<trashViewModel.getDeletedTasksCount() {
-            if trashViewModel.getDeletedTaskName(at: index).taskTitle.lowercased().contains(searchText.lowercased()) {
+            if taskHasSearchText(searchText: searchText, index: index) {
                 trashViewModel.addToFilteredData(task: trashViewModel.getDeletedTaskName(at: index))
                 trashViewModel.addToIndexArray(index: index)
             }

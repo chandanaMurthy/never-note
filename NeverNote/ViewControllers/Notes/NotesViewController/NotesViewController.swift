@@ -35,6 +35,8 @@ class NotesViewController: UIViewController {
     }
     
     @objc func dismissKeyboard() {
+        searchController.searchBar.endEditing(true)
+        searchController.isActive = false
         view.endEditing(true)
     }
     
@@ -96,6 +98,10 @@ extension NotesViewController: UITableViewDataSource, UITableViewDelegate {
             cell.detailTextLabel?.text = notesViewModel.getTaskName(at: indexPath.row).taskDetails
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 65
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -174,9 +180,17 @@ extension NotesViewController: UISearchResultsUpdating {
         return searchController.searchBar.text?.isEmpty ?? false
     }
     
+    func taskHasSearchText(searchText: String, index: Int) -> Bool {
+        let task = notesViewModel.getTaskName(at: index)
+        if task.taskTitle.lowercased().contains(searchText.lowercased()) || task.taskDetails.lowercased().contains(searchText.lowercased()) {
+            return true
+        }
+        return false
+    }
+    
     func filterContentForSearchText(_ searchText: String) {
         for index in 0..<notesViewModel.getTasksCount() {
-            if notesViewModel.getTaskName(at: index).taskTitle.lowercased().contains(searchText.lowercased()) {
+            if taskHasSearchText(searchText: searchText, index: index) {
                 notesViewModel.addToFilteredData(task: notesViewModel.getTaskName(at: index))
                 notesViewModel.addToIndexArray(index: index)
             }
