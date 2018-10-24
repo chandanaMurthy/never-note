@@ -18,18 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InvertedElephant" translatesAutoresizingMaskIntoConstraints="NO" id="gmh-lO-I2H">
-                                <rect key="frame" x="0.0" y="344" width="375" height="134"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NeverNote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSp-fQ-ovu">
+                                <rect key="frame" x="111.33333333333333" y="385.66666666666669" width="152.33333333333337" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gmh-lO-I2H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="85s-3e-FQy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gmh-lO-I2H" secondAttribute="trailing" id="YGY-cI-hVp"/>
-                            <constraint firstItem="gmh-lO-I2H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zzp-cz-g4Y"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gmh-lO-I2H" secondAttribute="bottom" constant="300" id="iUZ-OA-gAC"/>
-                            <constraint firstItem="gmh-lO-I2H" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pxi-lG-GK4"/>
-                            <constraint firstItem="gmh-lO-I2H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uX4-Df-4s3"/>
+                            <constraint firstItem="KSp-fQ-ovu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ofc-Sx-aFG"/>
+                            <constraint firstItem="KSp-fQ-ovu" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="RWx-9R-4bK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -39,7 +38,4 @@
             <point key="canvasLocation" x="52" y="374.6305418719212"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="InvertedElephant" width="36" height="36"/>
-    </resources>
 </document>

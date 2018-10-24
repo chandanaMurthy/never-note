@@ -35,6 +35,9 @@ class HomeTabBarController: UITabBarController {
     }
     
     private func setupTabBar() {
+        tabBar.tintColor = .blue
+        tabBar.unselectedItemTintColor = .white
+        
         notesNavigationController.tabBarItem = UITabBarItem(title: Constants.NOTES, image: #imageLiteral(resourceName: "Notes").withRenderingMode(.alwaysTemplate), tag: 0)
         completedNavigationController.tabBarItem = UITabBarItem(title: Constants.COMPLETED, image: #imageLiteral(resourceName: "Done").withRenderingMode(.alwaysTemplate), tag: 1)
         trashNavigationController.tabBarItem = UITabBarItem(title: Constants.TRASH, image: #imageLiteral(resourceName: "Trash").withRenderingMode(.alwaysTemplate), tag: 2)
